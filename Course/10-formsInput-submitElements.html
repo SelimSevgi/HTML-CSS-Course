@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <!-- 
+        FORM;
+            Metin alanları, onay kutuları, radyo düğmeleri, gönderme düğmeleri,:
+            eleman gibi girdi elemanlarının farklı türleri için bir kapsar.
+            name="" kısmı sadece urlde ne olduğu hakkında biz bilgi sağlar.
+            id="" kısmı etiket vermemizi sağlar.
+    -->
+    <form action="" method="">
+        
+      <!-- 
+          LABEL;
+            <label id='name'></label>  input id name kısmına etiketi burada vurgulamak için kullanıyoruz.
+            p de kullanabiliriz.
+        -->
+      <label for="name">First Name:</label>
+
+      <!--  
+          TEXT;   
+            <input type="text" name="name" id="name"> 
+            text tipinde veri alanı oluşturur.
+        -->
+      <input type="text" name="isim" id="name" />
+      <br />
+
+      <!--
+          ŞİFRE;
+            <input type="password" name="" id="" placeholder="password" />
+            placeholder="Lütfen şifrenizi giriniz" ne yazılması hakkında fikir verir.
+        -->
+      <p>Password</p>
+      <input
+        type="password"
+        name="şifre"
+        id=""
+        placeholder="Lütfen şifrenizi giriniz"
+      />
+      <br />
+
+      <!--
+          EMAİL;
+            value="email@email"
+            verilen değer aktif olarak sürekli kullanılacak.
+      -->
+      <input type="email" name="emailadresi" id="" value="email@email" />
+      <p>AÇIKLAMA</p>
+
+      <!--
+          TEXTAREA;
+            daha uzun açıklama satırı yapabileceğimiz bir alan oluşturuyor.
+            cols="60" sütün uzunluğu
+            rows="10" satır uzunluğu
+      -->
+      <textarea name="" id="" cols="60" rows="10"></textarea>
+      <p>Favori yazılım diliniz hangisidir?</p>
+
+      <!--
+          RADİO;
+            seçenek sunmamıza ve seçmemize yarıyor
+            value="py" kişi tarafından seçilen radio butonun değerini ne olduğunu gösterir.
+      -->
+      <input type="radio" name="coding" id="" value="javascript" />JavaScript
+      <input type="radio" name="coding" id="" value="java" />Java
+      <input type="radio" name="coding" id="" value="py" />Python
+      <br />
+      <p>hangi yazılım dillerini seviyorsunuz?</p>
+
+      <!--
+          CHECKBOX;
+            birden fazla seçenek seçmemize yarıyor
+      -->
+      <input
+        type="checkbox"
+        name="programming"
+        id=""
+        value="javascript"
+      />JavaScript
+      <input type="checkbox" name="programming" id="" value="java" />Java
+      <input type="checkbox" name="programming" id="" value="py" />Python
+      <p>hangi yazılım dillerini seviyorsunuz?</p>
+
+      <!--
+          SELECT-OPTİON;
+            Açılır menü halinde seçim yapmamızı sağlar 
+            Sadece tek bir seçeneği seçebiliyoruz.
+      -->
+      <select name="langues" id="">
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="py">Python</option>
+      </select>
+      <br />
+
+      <!--
+          BUTTON;
+            <button type="submit"> komutu sunucuya yollanmasını sağlayan butondur.
+            -(aynı şekilde)
+            <input type="submit" value="Submit Please"> komutuyla button oluşturulabilir.
+        -->
+      <button type="submit">Submit</button>
+      <input type="submit" value="Submit Please" />
+    </form>
+  </body>
+</html>

@@ -2,10 +2,17 @@
 ```html 
 <!-- AÇIKLAMA SATIRI-->
 <!-- 
-    Kütüphane eklemek için;  
-    Uzantılar - Live Server  
+    Kütüphane - Eklentileri eklemek için;  
+    Uzantılar 
+    - Live Server : statik dilleri canlı bir sunucuda kullanabilmek.
+    - Prettier - Code formatter : otomotik olarak metinleri düzenlemize yarar.
+    Settings - Format - *Format on paste ve *Format on save kısımlarını aktif yapıyoruz 
 -->
 
+<!--
+  Klavye Kısayolllarına gidip istediğimiz düzenlemeyi kendimize göre şekillendirebiliriz.
+  (Ctrl basılı tutularak K sonra S tuşuna basılmalıdır)
+-->
 <!-- 
     ! Tab yaparak HTML temel öğelerini aktif hale getirebiliyoruz. 
 -->
@@ -373,3 +380,275 @@
   </body>
 </html>
 ```
+>## 8-list(listeler 'l')
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+  </head>
+  <body>
+
+    <!--
+        ul sırasız listeler
+        li komutunu kullanarak liste oluşturuyoruz
+    -->
+    <ul>
+      <li>selim</li>
+      <li>sevgi</li>
+
+      <!--
+          listeler halinde sayfalar arasında geçiş yapabiliriz.
+      -->
+      <li>
+        <a href="7-forms-writtingElements(yazıŞekilleri).html" target="_blank"
+          >back to forms-writtingElements(yazıŞekilleri) page
+        </a>
+      </li>
+    </ul>
+
+    <!--
+        ol sıralı liste
+    -->
+    <ol>
+      <li>elektrik</li>
+      <li>ve</li>
+      <li>elektronik</li>
+      <li>mühendisi</li>
+    </ol>
+
+    <!--
+        iç içe listeler
+        ul sırasız liste ve ol sıralı liste birlikte kullanımı
+        3 tane liste oluşturmak istiyorsak (li*3) kısayolunu kullanabiliriz
+    -->
+    <h3>Dersler</h3>
+    <ul>
+      <li>Matematik</li>
+      <ol>
+        <li>Sayı ve kesir</li>
+        <li>Yüzde</li>
+        <li>Kar-Zarar</li>
+      </ol>
+      <li>Türkçe</li>
+      <ol>
+        <li>Cümlenin Öğeleri</li>
+        <li>Paragraf</li>
+      </ol>
+      <li>Coğrafya</li>
+      <ol>
+        <li>Türkiyenin Yer Şekilleri</li>
+      </ol>
+    </ul>
+  </body>
+</html>
+```
+>## 9-tableElement
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+  </head>
+  <body>
+    <!--
+        table tab tuşuna basarak tablo oluştuyoruz
+        tr komutunu kullarak "row" satır halinde ekleme yapılıyor
+        alt satıra geçmek için yine tr komutunu kullanıyoruz
+        th başlık kalın olarak yazıyor
+        td normal olarak yazıyor
+      -->
+    <table>
+      <tr>
+        <th>Hasta</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+      <tr>
+        <th>Adı</th>
+        <td>Emil</td>
+        <td>Tobias</td>
+        <td>Linus</td>
+      </tr>
+      <tr>
+        <th>Yaşı</th>
+        <td>16</td>
+        <td>14</td>
+        <td>10</td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+>## 10-formsInput-submitElements
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sup ans Sub Elements</title>
+  </head>
+  <body>
+    <!--
+        sub komutu içinde yer alan metin aşağıda 
+        sup komutu içinde yer alan metin yukarıda 
+        gösterilir.
+    -->
+    <h1>
+      I <sub>am </sub> Selim, Electric <sub>and</sub> Eletronic
+      <sup>Engineer</sup>
+    </h1>
+
+    <!--
+        strong komutu içinde yer alan metin vurgulu
+        em komutu içinde yer alan metin italik
+    -->
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore nostrum
+      quas, fugiat consequuntur quaerat totam error quae dignissimos aspernatur
+      blanditiis rem tenetur eveniet <br />
+      <strong>maxime inventore iusto numquam, dicta quo explicabo at?Repudiandae,
+        dolorum cum! Nesciunt, nulla dignissimos? Optio eveniet iusto quas.
+        Reiciendis aperiam, sunt error quaerat, excepturi fugiat labore, sint
+        tempore quisquam veniam perspiciatis quia aliquam quos dolor eos
+        quibusdam nulla</strong>
+      <br />
+      <em>et eaque consectetur odio corrupti provident. Officia voluptates velit
+        blanditiis provident eos et magni assumenda possimus facilis eaque
+        officiis delectus, neque ipsum, repellendus nobis incidunt reprehenderit
+        animi atque nemo,</em>
+      <br />
+    </p>
+    <!--
+        Özel karakterler 
+        arama yerine 
+        google special character in html yazarak istediğimiz karakteri bulabiliriz.
+        &copy ->  ©
+    -->
+    <h2>TSE &copy</h2>
+  </body>
+</html>
+```
+>## 10-formsInput-submitElements
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <!-- 
+        FORM;
+            Metin alanları, onay kutuları, radyo düğmeleri, gönderme düğmeleri,:
+            eleman gibi girdi elemanlarının farklı türleri için bir kapsar.
+            name="" kısmı sadece urlde ne olduğu hakkında biz bilgi sağlar.
+            id="" kısmı etiket vermemizi sağlar.
+    -->
+    <form action="" method="">
+        
+      <!-- 
+          LABEL;
+            <label id='name'></label>  input id name kısmına etiketi burada vurgulamak için kullanıyoruz.
+            p de kullanabiliriz.
+        -->
+      <label for="name">First Name:</label>
+
+      <!--  
+          TEXT;   
+            <input type="text" name="name" id="name"> 
+            text tipinde veri alanı oluşturur.
+        -->
+      <input type="text" name="isim" id="name" />
+      <br />
+
+      <!--
+          ŞİFRE;
+            <input type="password" name="" id="" placeholder="password" />
+            placeholder="Lütfen şifrenizi giriniz" ne yazılması hakkında fikir verir.
+        -->
+      <p>Password</p>
+      <input
+        type="password"
+        name="şifre"
+        id=""
+        placeholder="Lütfen şifrenizi giriniz"
+      />
+      <br />
+
+      <!--
+          EMAİL;
+            value="email@email"
+            verilen değer aktif olarak sürekli kullanılacak.
+      -->
+      <input type="email" name="emailadresi" id="" value="email@email" />
+      <p>AÇIKLAMA</p>
+
+      <!--
+          TEXTAREA;
+            daha uzun açıklama satırı yapabileceğimiz bir alan oluşturuyor.
+            cols="60" sütün uzunluğu
+            rows="10" satır uzunluğu
+      -->
+      <textarea name="" id="" cols="60" rows="10"></textarea>
+      <p>Favori yazılım diliniz hangisidir?</p>
+
+      <!--
+          RADİO;
+            seçenek sunmamıza ve seçmemize yarıyor
+            value="py" kişi tarafından seçilen radio butonun değerini ne olduğunu gösterir.
+      -->
+      <input type="radio" name="coding" id="" value="javascript" />JavaScript
+      <input type="radio" name="coding" id="" value="java" />Java
+      <input type="radio" name="coding" id="" value="py" />Python
+      <br />
+      <p>hangi yazılım dillerini seviyorsunuz?</p>
+
+      <!--
+          CHECKBOX;
+            birden fazla seçenek seçmemize yarıyor
+      -->
+      <input
+        type="checkbox"
+        name="programming"
+        id=""
+        value="javascript"
+      />JavaScript
+      <input type="checkbox" name="programming" id="" value="java" />Java
+      <input type="checkbox" name="programming" id="" value="py" />Python
+      <p>hangi yazılım dillerini seviyorsunuz?</p>
+
+      <!--
+          SELECT-OPTİON;
+            Açılır menü halinde seçim yapmamızı sağlar 
+            Sadece tek bir seçeneği seçebiliyoruz.
+      -->
+      <select name="langues" id="">
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="py">Python</option>
+      </select>
+      <br />
+
+      <!--
+          BUTTON;
+            <button type="submit"> komutu sunucuya yollanmasını sağlayan butondur.
+            -(aynı şekilde)
+            <input type="submit" value="Submit Please"> komutuyla button oluşturulabilir.
+        -->
+      <button type="submit">Submit</button>
+      <input type="submit" value="Submit Please" />
+    </form>
+  </body>
+</html>
