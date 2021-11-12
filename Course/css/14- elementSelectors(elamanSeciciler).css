@@ -1,0 +1,14 @@
+/* 
+    Element Selectors 
+    tek tek eleman seçimini yapıyoruz h1 h2 h3 p.... gibi
+*/
+h1 {
+  color: red;
+}
+
+h2 {
+  color: green;
+}
+p {
+  color: grey;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>externalCss(hariciCss)</title>
+    
+    <!--
+        css dosyası ekledik ve değişiklikleri görmek için 
+        <link rel="stylesheet" href=""> css aktif kılıyoruz.
+            href="" kısımına css dosya uzantısını yazıyoruz.
+    -->
+    <link rel="stylesheet" href="./css/13- externalCss(hariciCss).css">
+    
+    <!--
+        -------------------------------
+        Power Struggle - Güç Mücadelesi
+        css dosyasının içinde h1 rengi turuncu olmasına rağmen 
+        head kısmına yazdığımız style içindeki kod aktif oldu.
+    -->
+    <style>
+        h1{color: aqua;}
+    </style>
+</head>
+  <body>
+    <a href="./13- externalCss(hariciCss)_about.html">13- externalCss(hariciCss)_about.html</a>
+    
+    <!--
+        style içindeki renk turkuaz olmasına rağmen 
+        h1 içine yazığımız style rengi daha baskın
+    -->
+    <h1 style="color: green;">Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+
+    <h2>Hello people</h2>
+    <h2>Hello people</h2>
+    <h2>Hello people</h2>
+    <h2>Hello people</h2>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+/*
+    Burada yapılan css kod değişiklikleri aktif kılınan html dosyalarında görülür.
+*/
+h1{
+    color: orange;
+    font-size: 4rem;
+}
+
+h2{
+    color: red;
+}

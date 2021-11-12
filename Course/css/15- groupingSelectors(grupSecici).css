@@ -1,0 +1,14 @@
+/*
+    Vucut kısında bulunan yazı renklerini
+*/
+body{
+    color: blue;
+}
+
+/*
+    Grouping Selectors
+    h1 ve h2 ikisini gruplandırdığımız için ikiside aynı renge sahip
+*/
+h1,h2{
+    color: red;
+}
