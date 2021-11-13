@@ -1053,3 +1053,404 @@ h2 {
   color: red;
 }
 ```
+
+> ## 16- idSelectors(kimlikSeciciler)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>idSelectors(kimlikSeciciler)</title>
+    <link rel="stylesheet" href="./css/16- idSelectors(kimlikSeciciler).css" />
+  </head>
+  <body>
+    <!--
+          h1'deki id kısımla cssdeki aynı olmak zorunda eşleşmesi için
+      -->
+    <h1 id="Heading">Title heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur adipisci
+      aliquam quam soluta, fuga voluptatem id numquam laborum magni ullam?
+      Quisquam autem nihil reiciendis dolore quaerat aspernatur omnis, quia
+      deleniti illum molestias nulla corporis ab mollitia eligendi veniam
+      pariatur quae et ipsum. Voluptas in minus perferendis ipsum fuga illo at.
+      Enim dolorem, veniam facere ipsam quasi deleniti quo, iure ipsum rem
+      excepturi repellat dolorum. Quidem quibusdam eum vero possimus eius
+      aliquid pariatur sint, cupiditate assumenda est harum explicabo nemo velit
+      minus quae delectus voluptate doloribus non quam porro expedita accusamus
+      suscipit! Veritatis veniam ipsum tempore qui perferendis perspiciatis
+      dolor adipisci, natus commodi excepturi reiciendis, ex molestias illum
+      sunt minima pariatur voluptatum dolorum rerum aut ad deserunt non. A totam
+      minus ex non, quaerat alias, atque dolore, fugiat voluptatum expedita enim
+      suscipit impedit. Reiciendis culpa ipsam maxime accusamus est laborum,
+      distinctio excepturi ex libero temporibus placeat atque nisi? Voluptas,
+      ipsam modi voluptatibus sit, eveniet magni rem facilis cupiditate illo vel
+      quis repudiandae iusto? Natus obcaecati qui ratione non laborum id tempora
+      omnis nemo, libero, sunt amet optio rerum accusantium officia eos ullam
+      incidunt impedit dolorum modi voluptatum animi sapiente ipsum! Delectus
+      iusto tenetur quas error? At doloremque ipsa sunt nisi vero?
+    </p>
+    <h1 id="subHeading">Footer Heading</h1>
+  </body>
+</html>
+```
+
+> ## 16- idSelectors(kimlikSeciciler) .css
+
+```css
+/*
+    ID
+    İlk başta tanımlanın h1'e verilen id'i burada şekillendiriyoruz.
+*/
+#Heading {
+  color: green;
+  /* 
+        background: arka plan rengi
+    */
+  background: black;
+}
+/*
+    Verilen id isimleri eşsiz olmalıdır.
+*/
+#subHeading {
+  color: red;
+  background: blue;
+}
+```
+
+> ## 17- classSelector(sınıfSeciciler)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classSelector(sınıfSeciciler)</title>
+    <link rel="stylesheet" href="./css/17- classSelector(sınıfSeciciler).css" />
+  </head>
+  <body>
+    <!--
+          classlar >'den önce kullanılmalıdır.
+          class="yeş kharf" yeş ve kharf iki adet sınıf bulunmaktadır. 
+      -->
+    <h3 id="baslık" class="yeş kharf">Yeşil</h3>
+    <h3 class="kırm">Kırmızı</h3>
+    <h3 class="yeş">Yeşil</h3>
+    <h3 class="kırm kharf">Kırmızı</h3>
+    <h3 class="yeş">Yeşil</h3>
+    <h3 class="kırm">Kırmızı</h3>
+  </body>
+</html>
+```
+
+> ## 17- classSelector(sınıfSeciciler) .css
+
+```css
+/*
+    CLASS SELECTOR SINIF SECICI
+    html de belirlenen sınıflar css de .(class_name) şekilde yazılmalıır.
+*/
+.yeş {
+  color: green;
+}
+.kırm {
+  color: red;
+  background-color: blue;
+}
+
+/*
+    font-size: yazı boyutu
+*/
+#baslık {
+  font-size: 50px;
+}
+
+.kharf {
+  /*
+    
+*/
+  text-transform: lowercase;
+}
+```
+
+> ## 18- div-spanElements
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div-spanElements</title>
+    <link rel="stylesheet" href="./css/18- div-spanElements.css" />
+  </head>
+  <body>
+    <!--
+        span - div bloklara ayırıyor.
+        div parçalara ayırıyor.
+    -->
+    <div class="kırmızı">
+      <h3>heading number one</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nihil
+        commodi nobis reiciendis doloremque dignissimos quos recusandae qui odit
+        animi.
+      </p>
+    </div>
+
+    <div class="yesil">
+      <h3>heading number two</h3>
+      <!--
+        spanda metin aynı kalıyor herhangi bir değişiklik yok
+        div metodunda alt satıra bir blok şeklinde görülüyor
+      -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div class="kırmızı">büyük harf</div> Eligendi nihil commodi nobis reiciendis
+        doloremque dignissimos quos recusandae <span>büyük harf</span> qui odit
+        animi.
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+> ## 18- div-spanElements .css
+
+```css
+.kırmızı {
+  color: red;
+  background: grey;
+}
+
+.yesil {
+  color: green;
+}
+
+span {
+  text-transform: uppercase;
+}
+```
+
+> ## 19- cssInheritance(Miras)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cssInheritance(Miras)</title>
+    <link rel="stylesheet" href="./css/19- cssInheritance(Miras).css" />
+  </head>
+  <body>
+    <div>
+      <h2>i'm heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+        placeat ea nesciunt iusto cum tempore, possimus libero nobis
+        consequuntur praesentium!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+        placeat ea nesciunt iusto cum tempore, possimus libero nobis
+        consequuntur praesentium!
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+> ## 19- cssInheritance(Miras) .css
+
+```css
+/*
+    INHERİTANCE
+*/
+
+/*
+    sırasıyla devralma listesi -> body - div - h2 genelden özele doğru
+*/
+
+/*
+    font-family: yazı tipini değiştirir.
+    line-height: satır yüksekliği
+*/
+
+body {
+  font-family: monospace;
+  line-height: 1.5em;
+  color: red;
+}
+
+/*
+    burada body taradından miras bırakılan div ektin olacaktır.
+*/
+div {
+  border: 3px solid black;
+  color: blue;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: green;
+}
+```
+
+> ## 20- specificity-universalSelector(ozgulluk-evrenselSeciciler)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>specificity-universalSelector(ozgulluk-evrenselSeciciler)</title>
+    <link
+      rel="stylesheet"
+      href="./css/20- specificity-universalSelector(ozgulluk-evrenselSeciciler).css"
+    />
+  </head>
+  <body>
+    <div>
+      <h2>başlık</h2>
+      <p class="renk">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nobis
+        numquam, obcaecati vel officiis voluptatibus dicta laudantium illum in
+        quisquam.
+      </p>
+      <p class="renk">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+        expedita aliquam sapiente corporis ea animi quisquam dicta vero nesciunt
+        molestias eligendi nostrum quae voluptatibus debitis odit, explicabo ex
+        in. Voluptatibus.
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+> ## 20- specificity-universalSelector(ozgulluk-evrenselSeciciler) .css
+
+```css
+/*
+    her zaman son yazılan kod geçerli olacaktır.
+*/
+p {
+  color: blue;
+}
+
+/* .... */
+
+/* buradaki kod aktif olacaktır. */
+p {
+  color: red;
+}
+
+/* 
+    sınıf ve sınıfsız durumlarda ise sınıf verdiğimiz durum aktif olacaktır.
+*/
+p {
+  color: brown;
+}
+/* buradaki kod aktif olacaktır. */
+.renk {
+  color: coral;
+}
+```
+
+> ## 21- color-backgroundcolorProperties
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color-backgroundcolorProperties</title>
+    <link
+      rel="stylesheet"
+      href="./css/21- color-backgroundcolorProperties.css"
+    />
+  </head>
+  <body>
+    <h3 id="first">i'm heading number one</h3>
+    <h3 id="second">i'm heading number two</h3>
+    <h3 id="third">i'm heading number three</h3>
+    <h3 id="four">i'm heading number four</h3>
+  </body>
+</html>
+```
+
+> ## 21- color-backgroundcolorProperties .css
+
+```css
+/* 
+    COLOR PROPERTİES _ COLOR BACKGROUND-COLOR
+    RGB (Red-Green-Blue) 0 - 255 arasında değerleri kapsar.
+    RGBA RGB'de olduğu gibi renk kodları yazılır. en sonunda opaklık verilir.
+    Colorname 140 adet renk kodlarını modern tarayıcılar destekler.  HEX kodunda renkleri verir
+        Bej -> #F5F5DC
+        HEX values #RRGGBB 0 - 15 arasında değer alır.
+            1 2 3 4 6 7 8 9 A(10) B(11) C(12) D(13) E(14) F(15)
+            1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+            #FF0000 -> RED
+            #00FF00 -> GREEN
+    - https://coolors.co sitesinde projeniziçin güzel renkler seçmenizi sağlar.
+*/
+body {
+  background: #f5f5dc;
+}
+
+#first {
+  /* 
+    kırmızı rgb de elde etmek için kırmızı bölümüne denk gelen kısma 
+    255 diğer kısımlara 0 yazarak elde edebiliriz.
+    */
+  color: rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+
+/* background-color ve background arasında bir fark yok */
+#second {
+  color: coral;
+  background: rgb(141, 1, 141);
+}
+
+/* 
+    RGBA'da en sondakiyle opaklık ayarı yapabiliriz.
+        opaklık 1 e yaklasınca rgb'deki gibi oluyor 0'a yaklasınca daha da saydam oluyor
+*/
+#third {
+  color: darkseagreen;
+  background: rgba(141, 1, 141, 0.2);
+}
+
+/* RGBA'daki opaklık değeri 0 olunca tamamen beyaz renk oluyor. */
+#four {
+  color: rgb(44, 94, 187);
+  background: rgba(14, 155, 84, 0);
+}
+```
+
+> ## 22- PixelsFontsizeWidthHeight(PikselYazıtipiBoyutuGenişlikYükseklik)
+
+```html
+
+```
+
+> ## 22- PixelsFontsizeWidthHeight(PikselYazıtipiBoyutuGenişlikYükseklik) .css
+
+```css
+
+```

@@ -1,0 +1,24 @@
+/*
+    her zaman son yazılan kod geçerli olacaktır.
+*/
+p{
+    color: blue;
+}
+
+/* .... */
+
+/* buradaki kod aktif olacaktır. */
+p{
+    color: red;
+}
+
+/* 
+    sınıf ve sınıfsız durumlarda ise sınıf verdiğimiz durum aktif olacaktır.
+*/
+p{
+    color: brown;
+}
+/* buradaki kod aktif olacaktır. */
+.renk{
+    color: coral;
+}

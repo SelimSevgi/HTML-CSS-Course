@@ -1,0 +1,18 @@
+/*
+    ID
+    İlk başta tanımlanın h1'e verilen id'i burada şekillendiriyoruz.
+*/
+#Heading {
+  color: green;
+  /* 
+        background: arka plan rengi
+    */
+  background: black;
+}
+/*
+    Verilen id isimleri eşsiz olmalıdır.
+*/
+#subHeading{
+color: red;
+background: blue;
+}

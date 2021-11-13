@@ -1,0 +1,32 @@
+/*
+    INHERİTANCE
+*/
+
+/*
+    sırasıyla devralma listesi -> body - div - h2 genelden özele doğru
+*/
+
+/*
+    font-family: yazı tipini değiştirir.
+    line-height: satır yüksekliği
+*/
+
+body{
+    font-family: monospace;
+    line-height: 1.5em;
+    color: red;
+}
+
+/*
+    burada body taradından miras bırakılan div ektin olacaktır.
+*/
+div{
+    border: 3px solid black;
+    color:blue
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    color: green;
+}

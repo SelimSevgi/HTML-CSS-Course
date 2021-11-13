@@ -1,0 +1,46 @@
+/* 
+    COLOR PROPERTİES _ COLOR BACKGROUND-COLOR
+    RGB (Red-Green-Blue) 0 - 255 arasında değerleri kapsar.
+    RGBA RGB'de olduğu gibi renk kodları yazılır. en sonunda opaklık verilir.
+    Colorname 140 adet renk kodlarını modern tarayıcılar destekler.  HEX kodunda renkleri verir
+        Bej -> #F5F5DC
+        HEX values #RRGGBB 0 - 15 arasında değer alır.
+            1 2 3 4 6 7 8 9 A(10) B(11) C(12) D(13) E(14) F(15)
+            1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+            #FF0000 -> RED
+            #00FF00 -> GREEN
+    - https://coolors.co sitesinde projeniziçin güzel renkler seçmenizi sağlar.
+*/
+body {
+  background: #F5F5DC;
+}
+
+#first {
+  /* 
+    kırmızı rgb de elde etmek için kırmızı bölümüne denk gelen kısma 
+    255 diğer kısımlara 0 yazarak elde edebiliriz.
+    */
+  color: rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+
+/* background-color ve background arasında bir fark yok */
+#second {
+  color: coral;
+  background: rgb(141, 1, 141);
+}
+
+/* 
+    RGBA'da en sondakiyle opaklık ayarı yapabiliriz.
+        opaklık 1 e yaklasınca rgb'deki gibi oluyor 0'a yaklasınca daha da saydam oluyor
+*/
+#third {
+  color: darkseagreen;
+  background: rgba(141, 1, 141, 0.2);
+}
+
+/* RGBA'daki opaklık değeri 0 olunca tamamen beyaz renk oluyor. */
+#four{
+    color: rgb(44, 94, 187);
+    background: rgba(14, 155, 84, 0);
+}

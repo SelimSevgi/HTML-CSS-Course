@@ -1,0 +1,25 @@
+/*
+    CLASS SELECTOR SINIF SECICI
+    html de belirlenen sınıflar css de .(class_name) şekilde yazılmalıır.
+*/
+.yeş{
+    color: green;
+}
+.kırm{
+    color: red;
+    background-color: blue;
+}
+
+/*
+    font-size: yazı boyutu
+*/
+#baslık{
+    font-size: 50px;
+}
+
+.kharf{
+/*
+    
+*/
+    text-transform: lowercase;
+}

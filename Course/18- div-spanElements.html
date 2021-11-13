@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div-spanElements</title>
+    <link rel="stylesheet" href="./css/18- div-spanElements.css" />
+  </head>
+  <body>
+    <!--
+        span - div bloklara ayırıyor.
+        div parçalara ayırıyor.
+    -->
+    <div class="kırmızı">
+      <h3>heading number one</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nihil
+        commodi nobis reiciendis doloremque dignissimos quos recusandae qui odit
+        animi.
+      </p>
+    </div>
+
+    <div class="yesil">
+      <h3>heading number two</h3>
+      <!--
+        spanda metin aynı kalıyor herhangi bir değişiklik yok
+        div metodunda alt satıra bir blok şeklinde görülüyor
+      -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div class="kırmızı">büyük harf</div> Eligendi nihil commodi nobis reiciendis
+        doloremque dignissimos quos recusandae <span>büyük harf</span> qui odit
+        animi.
+      </p>
+    </div>
+  </body>
+</html>
