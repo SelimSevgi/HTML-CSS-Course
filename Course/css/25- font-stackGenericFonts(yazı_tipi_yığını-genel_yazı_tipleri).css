@@ -1,0 +1,31 @@
+/*
+    Google Fonts
+    https://fonts.google.com sitesi üzerinden istediğimiz yazı stilinin html link'ini ve css kodunu alabilir.
+    Roboto ve Damion yazı stili için aldık.
+*/
+
+/* 
+    Yazı tipleri seçip import kısmına gelerek kullanmak istediğimiz yazı tipini import edebiliriz. 
+    Html'de kullandığımız link'e gerek kalmıyor
+    */
+
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    font-family: 'Damion', cursive;
+    text-align: right;  /* metni hizalamak -> sağ */
+}
+.one{
+    font-weight: 500; /* yazı kalınlığı */
+    font-style: italic; /* metin stili italik-kalın-normal vs. */
+    text-indent:150px ; /* paragraf başlığı girintisi */
+    text-align: left;
+}
+.two{
+    font-weight: bolder;
+    text-align: center;
+}

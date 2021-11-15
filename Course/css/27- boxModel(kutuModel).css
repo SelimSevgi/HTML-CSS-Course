@@ -1,0 +1,98 @@
+/* 
+    CSS BOX MODEL
+        padding -> dolgu (iç)
+        margin -> kenar boşluğu (dış)   =****= "-" negatif değer alırsa tam tersi kenar boşluğu sağlanır. =****=
+            X: ? -> her taraftan aynı oranda
+            X-top: ? -> üst
+            X-bottom: ? -> alt
+            X-left: ? -> sol
+            X-right: ? -> sağ
+            X: ?1 ?2 -> ?1(üst-alt) ?2(sağ-sol)
+            X: ?1 ?2 ?3 ?4 -> ?1(üst) ?2(sağ) ?3(alt) ?4(sol)
+        border -> sınır çizgisi
+            border-color -> sınır çizgi rengi
+            border-width -> sınır çizgi kalınlığı
+            border-style -> sınır çizgi stili
+            border: ?1 ?2 ?3 -> tek satırda ?1(piksel) ?2 çizgi stili ?3 çizgi rengi
+            border-bottom-style -> alt sınır çizgi stili (üst sağ sol aynı şekilde) 
+                Sınır çizgi stilleri;
+                solid -> kutu halinde (düz çizgi)
+                dashed -> kesikli çizgi
+                dotted -> nokta nokta
+            border-radius -> yarıçap - sınır çizgisine ovallik veriyoruz (en fazla 50px verebiliriz.)
+
+
+*/
+
+h1 {
+  background: red;
+  /* ------- padding ------- */
+  padding-top: 30px; /* yukarıdan dolgu boşluk verir. */
+  padding-bottom: 30px; /* aşağıdan dolgu boşluk verir. */
+  padding-left: 10px; /*soldan dolgu boşluk verir. */
+  padding-right: 70px; /*sağdan dolgu boşluk verir */
+  /* ------- margin ------- */
+  margin-right: 20px; /* sağdan kenar boşluğu */
+  margin-bottom: 50px; /* alt kenar boşluğu */
+  margin-top: 40px; /* üst kenar boşluğu */
+  margin-left: 30px; /* sol kenar boşluğu */
+  /* ------- border ------- */
+  border-style: solid; /* sınır çizgileri */
+  border-width: 10px; /* sınır çizgilerin kalınlığı */
+  border-color: blueviolet; /* sınır çizgilerin rengi */
+}
+.pbox {
+  background: violet;
+  /* ------- padding ------- */
+  padding: 50px; /* sağ sol yukarı ve aşağıdan dolgu boşluk verir. */
+  /* ------- margin ------- */
+  margin: 10px; /* bütün kenar boşluklarını aynı oranda ektiler */
+  /* ------- border ------- */
+  border: 15px solid chocolate; /*tek bir satırda sınır çizgilerini belirttik. */
+}
+
+/* 
+    pbox1 ile pbox2 box kutularının kenar boşluğu alnıp ikisi bir görünmesi için;
+        pbox1'in alt kenar boşluğu - pbox2'in üst kenar boşluğu sıfırlanmalıdır 
+*/
+.pbox1 {
+  background: turquoise;
+  /* ------- padding ------- */
+  padding: 30px 60px; /* sağ ve soldan 60px yukarıdan ve aşağıdan 30px dolgu boşluğu*/
+  /* ------- margin ------- */
+  margin-bottom: 0px;
+  /* ------- border ------- */
+  border-bottom-style: dashed; /* alt sınır çizgi stili  dashed -> kesikli çizgi dotted -> nokta nokta */
+  border-width: 5px; /* alt sınır çizgi kalınlığı */
+  border-color: darkgoldenrod; /* alt sınır çizgi rengi */
+}
+.pbox2 {
+  background: skyblue;
+  /* ------- padding ------- */
+  padding: 20px 70px 40px 50px; /* 20px -> üst; 70px -> sağ; 40px -> aşağı;  50px -> sol  dolgu boşluğu*/
+  /* ------- margin ------- */
+  margin-top: 0px;
+}
+
+.pbox3 {
+  background: slategrey;
+   /* ------- margin ------- */
+  margin: 30px 60px; /* yukarı ve aşağıdan 30px - alt ve üstten 60 px kenar boşluğu */
+  /* ------- border ------- */
+  border: 5px solid orangered; /* tek satırda sınır çizgisi */
+  border-radius: 15px; /* sınır çizgisine ovallik veriyoruz */
+}
+.pbox4 {
+  background: rgb(215, 233, 149);
+  /* ------- margin ------- */
+  margin: 20px 60px 40px 30px; /* 20px -> üst  60px -> sağ 40px -> alt 30px ->sol kenar boşluğu*/
+  /* ------- border ------- */
+  border: 5px solid gold; /* tek satırda sınır çizgisi */
+  border-radius: 50px; /* sınır çizgisine ovallik veriyoruz */
+}
+.pbox5{
+    background: rosybrown;
+    border: 12px solid blue;
+    border-radius: 15px;
+    margin-top: -60px; /* negatif yönde kenar boşluğu */
+}

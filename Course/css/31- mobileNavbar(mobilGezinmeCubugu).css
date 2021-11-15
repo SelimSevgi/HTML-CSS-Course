@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul li{
+    list-style-type: none; /* listenin başında imleçler - listelerin nasıl sıralanacağını gösterir.*/
+}
+ul li a{
+text-decoration: none; /* metin dekorasyonunu sıfırlıyor. - link oluduğu için altındaki çizgi siliniyor*/
+text-transform: capitalize; /* her kelime büyük harfle başladı. */
+letter-spacing: 2px; /* harfler arasında boşluk bıraktık. */
+background: #222;
+color:red;
+display: block;
+padding: 10px 10px;
+margin: 10px 0px;
+}

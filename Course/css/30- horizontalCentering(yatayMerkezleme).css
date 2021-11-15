@@ -1,0 +1,25 @@
+/* Horizontal Centering -> Yatay Merkezleme */
+*{
+    text-align: center; /* merkeze alma */
+}
+.block{
+    background: yellowgreen;
+    color: black;
+    /* bu durumda genişlik verildiği için merkeze margin ile alabiliriz.*/
+    width: 150px;
+    /* margin ile merkeze alma 1.yol */
+    margin: 20px auto; /* üst ve alt -> 20px sağ ve sol -> otomatik */ 
+}
+.block1{
+    background: rgb(91, 50, 205);
+    color: black;
+    /* bu durumda genişlik verildiği için merkeze margin ile alabiliriz.*/
+    width: 150px;
+    /* margin ile merkeze alma 2.yol */
+    margin-left: auto;
+    margin-right: auto;
+}
+.inline{
+    background: turquoise;
+    color:darkgreen
+}

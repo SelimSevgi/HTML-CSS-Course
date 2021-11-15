@@ -1,0 +1,18 @@
+/*
+    Blok -> her zaman yeni bir satır başlatır ve tam genişlik alır.
+    inline(çizgideki) -> yeni satıra başlamaz ve yalnızca çok fazla kül içeriği alanı kaplar.
+*/
+
+
+.block{
+    background: violet;
+    color: bisque;
+    /* blok elementi inline element yapmak için; */
+    display: inline;
+}
+.inline{
+    background: tomato;
+    color: darkred;
+    /* inline elementi blok elementi yapmak için; */
+    display: block;
+}

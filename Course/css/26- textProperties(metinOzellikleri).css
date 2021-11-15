@@ -1,0 +1,33 @@
+/*
+    text-transform -> text dönüşümü
+        uppercase -> her harf büyük
+        capitalize -> her kelime büyük harfle başlar
+        lowercase -> her harf küçük
+*/
+h1 {
+  text-transform: lowercase; /*text dönüşümü */
+}
+/*
+    text-decoration -> metin dekorasyonu
+        none -> bir şey yok (sade hal)
+        line-through -> üstü çizgili
+        overline -> üstü çizgili
+        underline -> altı çizgili
+*/
+a {
+  font-size: 40px; /* yazı boyutu */
+  text-decoration: none; /* metin dekorasyonu */
+}
+.one {
+  line-height: 2.5em; /* her satır arasındaki boşluklar. */
+  text-decoration: line-through;
+}
+.two {
+  letter-spacing: 5px; /* harfler arasındaki boşluk */
+  text-decoration: overline;
+  line-height: 2rem;
+}
+.three {
+  word-spacing: 20px; /* kelimeler arasındaki boşluk */
+  text-decoration: underline;
+}

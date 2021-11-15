@@ -1,0 +1,74 @@
+/*
+    Piksel -> ekrandaki bir noktayı temsil eder. 
+        pikseller ekrandaki (genişlik ve yükseklikten etkilenmez.)
+        Mutlak değer alır ve orada kalır.
+        width -> genişlik
+        height -> yükseklik
+*/
+h1{
+    font-size: 80px;
+    width: 200px;
+    height: 300px;
+    background: violet;
+}
+
+/*
+    Percent Values - Relative -> yüzde değerleri göreceli
+        yüzdelik ifadeler ana ekrana göre ayarlanıyor. Değişiklik gösterebilir.
+        50% yüzdelik kısım olduğu için yarısını kırmızı gösteriyor
+        .outer kısmındaki genişlik ve yükseklik otomatikmen inner kısmınıda değiştiriyor.
+*/
+.outer{
+    width: 500px;
+    height: 500px;
+    background: blue;
+}
+.inner{
+    width: 50%;
+    height: 50%;
+    background: red;
+}
+
+/*
+    Relative - Absolute -> Göreceli - Mutlak
+        em - GÖRECELİK ebeveyne bağlıdır
+        1em -> 16px varsayılan tarayıcı stili
+        1em -> temel değer
+        Tarayıcıdaki font size ayarı değiştiğinde relative bağlı font size ayarında değişecektir.
+*/
+div{
+    font-size: 10px;
+}
+
+/* div'deki font-size ayarı em değerinin değişmesinede neden olur. */
+.relative{
+    font-size: 2em;
+}
+.absolute{
+    font-size: 32px;
+}
+
+/*
+    rem -> GÖRECELİK köke bağlıdır
+    1rem -> 16px varsayılan tarayıcı stili
+    rem'de değişiklik yapmak için en başta bulunan köke gidilmelidir. HTML'e
+*/
+
+/* 
+    html'e bağlı olarak değişiklik gösteriyor. Aynı zamanda
+    Tarayıcıdaki font size ayarı değiştiğinde relative bağlı font size ayarında değişecektir.
+*/
+html{
+    font-size: 32px;
+}
+
+/* istediğimiz kadar divdeki font-size ayarıyla oynasakta rem de değişiklik olmadı */
+.r-div,.a-div{
+    font-size: 80px;
+}
+.rela{
+    font-size: 2rem;
+}
+.abso{
+    font-size: 32px;
+}

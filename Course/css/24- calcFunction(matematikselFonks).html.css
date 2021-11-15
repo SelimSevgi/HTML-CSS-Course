@@ -1,0 +1,30 @@
+/*
+Calc()
+Perform math operations - Matematiksel işlemler yap (+ - * /)
+Mix and match values - Değerleri karıştır ve eşleştir.
+*/
+
+/* Varsayılan stili sıfırlıyoruz. */
+*{
+    margin: 0;
+}
+.navbar{
+    /* arkaplan rengi */
+    background: blue;
+    /* yükseklik */
+    height: 100px;
+    /* yazı rengi */
+    color: white;
+    /* html deki varsayılan ayara göre yazı boyutu belirleniyor */
+    font-size: 3rem; 
+}
+.banner{
+    background: red;
+    /* 
+        Matematiksel işlemleri yapmak için calc()'ı kullanıyoruz.
+        banner'de 100px ve ekranı yüzde yüz görmek için ; 
+        100vh'dan 100px'i çıkarıyoruz.
+        işlemleri yaparken aralarında boşluk bırakılmalıdr.
+    */
+    min-height: calc(100vh - 100px);
+}

@@ -1,0 +1,24 @@
+.buttons{
+    margin: 3rem; /*kenar uzunluğu dış*/
+}
+a{
+    background: #689f3f; /* arkaplan rengi */
+    text-decoration: none;  
+    padding: 1.2rem 1.5rem; /* dolgu iç kısım */
+    color: #222;
+    text-transform: uppercase; /* metin dönüşümü büyük harf */
+    cursor: pointer; /* imleç */
+    margin: 0 20px;
+}
+#one{
+    border:0.2rem solid #222 /* sınır çizgisi */
+}
+#two{
+    /* outline öğeyi ön plana çıkarmak için kullanılıyor. sınırların dışında öğenin etrafına çizilen bir çizgidir. */
+    outline-color: 0.2rem;
+    outline-style: solid;
+    outline-color :#222;
+    outline: 0.2rem solid #222; /* outline tek satır halinde yazılışı */
+    outline-offset: 10px; /* öğenin 10px (üst - alt - sağ - sol) aynı oranda dışarıda solid(kutunun) oluşturulması */
+    outline-offset: -15px; /* içeride */
+}

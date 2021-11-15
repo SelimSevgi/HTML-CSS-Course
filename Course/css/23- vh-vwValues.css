@@ -1,0 +1,26 @@
+/*
+    vh -> yükseklik - ekran yüzdesi - ekran değişimine bağlı olarak oranı anlık anlık olarak değişir 
+    vw -> genişlik - ekran yüzdesi 
+    küçük - büyük ekrana (istediğimiz boyuttaki ekrana) bağlı olarak anlık olarak değişimi gösterilir.
+*/
+/* 
+    margin -> kenardaki boşlukları 0'lıyoruz. 
+    padding -> içerideki boşluklarla alakalı
+    box-sizing: border-box -> genişlik ve yüksekliğe dolgu ve kenarlık eklenir
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.banner {
+  width: 50vw;
+  height: 50vh;
+  background: red;
+}
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: blue;
+}

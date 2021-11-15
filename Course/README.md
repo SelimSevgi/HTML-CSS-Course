@@ -1446,10 +1446,774 @@ body {
 > ## 22- PixelsFontsizeWidthHeight(PikselYazıtipiBoyutuGenişlikYükseklik)
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      PixelsFontsizeWidthHeight(PikselYazıtipiBoyutuGenişlikYükseklik)
+    </title>
+    <link
+      rel="stylesheet"
+      href="./css/22- PixelsFontsizeWidthHeight(PikselYazıtipiBoyutuGenişlikYükseklik).css"
+    />
+  </head>
+  <body>
+    <h1>units in the css</h1>
+    <h2>PixelsFontsizeWidthHeight(PikselYazıtipiBoyutuGenişlikYükseklik)</h2>
+    <!--
+        iç içe 2 div oluşturduk. ilk oluşturduğumuz div içerideki bütün divleri .. kapsar.
+    -->
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
 
+    <div>
+      <h3 class="relative">relative</h3>
+    </div>
+    <div>
+      <h3 class="absolute">absolute</h3>
+    </div>
+
+    <div class="r-div">
+      <h3 class="rela">relative</h3>
+    </div>
+    <div class="a-div">
+      <h3 class="abso">absolute</h3>
+    </div>
+  </body>
+</html>
 ```
 
 > ## 22- PixelsFontsizeWidthHeight(PikselYazıtipiBoyutuGenişlikYükseklik) .css
+
+```css
+/*
+    Piksel -> ekrandaki bir noktayı temsil eder. 
+        pikseller ekrandaki (genişlik ve yükseklikten etkilenmez.)
+        Mutlak değer alır ve orada kalır.
+        width -> genişlik
+        height -> yükseklik
+*/
+h1 {
+  font-size: 80px;
+  width: 200px;
+  height: 300px;
+  background: violet;
+}
+
+/*
+    Percent Values - Relative -> yüzde değerleri göreceli
+        yüzdelik ifadeler ana ekrana göre ayarlanıyor. Değişiklik gösterebilir.
+        50% yüzdelik kısım olduğu için yarısını kırmızı gösteriyor
+        .outer kısmındaki genişlik ve yükseklik otomatikmen inner kısmınıda değiştiriyor.
+*/
+.outer {
+  width: 500px;
+  height: 500px;
+  background: blue;
+}
+.inner {
+  width: 50%;
+  height: 50%;
+  background: red;
+}
+
+/*
+    Relative - Absolute -> Göreceli - Mutlak
+        em - GÖRECELİK ebeveyne bağlıdır
+        1em -> 16px varsayılan tarayıcı stili
+        1em -> temel değer
+        Tarayıcıdaki font size ayarı değiştiğinde relative bağlı font size ayarında değişecektir.
+*/
+div {
+  font-size: 10px;
+}
+
+/* div'deki font-size ayarı em değerinin değişmesinede neden olur. */
+.relative {
+  font-size: 2em;
+}
+.absolute {
+  font-size: 32px;
+}
+
+/*
+    rem -> GÖRECELİK köke bağlıdır
+    1rem -> 16px varsayılan tarayıcı stili
+    rem'de değişiklik yapmak için en başta bulunan köke gidilmelidir. HTML'e
+*/
+
+/* 
+    html'e bağlı olarak değişiklik gösteriyor. Aynı zamanda
+    Tarayıcıdaki font size ayarı değiştiğinde relative bağlı font size ayarında değişecektir.
+*/
+html {
+  font-size: 32px;
+}
+
+/* istediğimiz kadar divdeki font-size ayarıyla oynasakta rem de değişiklik olmadı */
+.r-div,
+.a-div {
+  font-size: 80px;
+}
+.rela {
+  font-size: 2rem;
+}
+.abso {
+  font-size: 32px;
+}
+```
+
+> ## 23- vh-vwValues
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vh-vwValues</title>
+    <link rel="stylesheet" href="./css/23- vh-vwValues.css" />
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="banner"></div>
+  </body>
+</html>
+```
+
+> ## 23- vh-vwValues .css
+
+```css
+/*
+    vh -> yükseklik - ekran yüzdesi - ekran değişimine bağlı olarak oranı anlık anlık olarak değişir 
+    vw -> genişlik - ekran yüzdesi 
+    küçük - büyük ekrana (istediğimiz boyuttaki ekrana) bağlı olarak anlık olarak değişimi gösterilir.
+*/
+/* 
+    margin -> kenardaki boşlukları 0'lıyoruz. 
+    padding -> içerideki boşluklarla alakalı
+    box-sizing: border-box -> genişlik ve yüksekliğe dolgu ve kenarlık eklenir
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.banner {
+  width: 50vw;
+  height: 50vh;
+  background: red;
+}
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: blue;
+}
+```
+
+> ## 24- calcFunction(matematikselFonks)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calcFunction</title>
+    <link rel="stylesheet" href="./css/24- calcFunction.css" />
+  </head>
+  <body>
+    <!--
+        Gezinme çubuğu
+    -->
+    <div class="navbar">This is navbar</div>
+
+    <!--    
+        Afiş
+    -->
+    <div class="banner"></div>
+  </body>
+</html>
+```
+
+> ## 24- calcFunction(matematikselFonks) .css
+
+```css
+/*
+Calc()
+Perform math operations - Matematiksel işlemler yap (+ - * /)
+Mix and match values - Değerleri karıştır ve eşleştir.
+*/
+
+/* Varsayılan stili sıfırlıyoruz. */
+* {
+  margin: 0;
+}
+.navbar {
+  /* arkaplan rengi */
+  background: blue;
+  /* yükseklik */
+  height: 100px;
+  /* yazı rengi */
+  color: white;
+  /* html deki varsayılan ayara göre yazı boyutu belirleniyor */
+  font-size: 3rem;
+}
+.banner {
+  background: red;
+  /* 
+        Matematiksel işlemleri yapmak için calc()'ı kullanıyoruz.
+        banner'de 100px ve ekranı yüzde yüz görmek için ; 
+        100vh'dan 100px'i çıkarıyoruz.
+        işlemleri yaparken aralarında boşluk bırakılmalıdr.
+    */
+  min-height: calc(100vh - 100px);
+}
+```
+
+> ## 25- font-stackGenericFonts(yazı_tipi_yığını-genel_yazı_tipleri)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font-stackGenericFonts(yazı_tipi_yığını-genel_yazı_tipleri)</title>
+    <link
+      rel="stylesheet"
+      href="./css/25- font-stackGenericFonts(yazı_tipi_yığını-genel_yazı_tipleri).css"
+    />
+    <!--
+        Google Fonts
+    -->
+    <!--
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Damion&family=Roboto:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    -->
+  </head>
+  <body>
+    <h1 class="main">Hey dude i'm main heading</h1>
+    <p class="one">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia aliquid
+      incidunt mollitia quae distinctio, repellendus tempora deleniti asperiores
+      rerum omnis ipsum placeat alias
+    </p>
+    <h1 class="subheading">Subheading</h1>
+    <p class="two">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque quis odio
+      tempore exercitationem quae debitis error voluptatum perferendis nemo.
+      Reiciendis quod omnis hic laborum culpa?
+    </p>
+  </body>
+</html>
+```
+
+> ## 25- font-stackGenericFonts(yazı_tipi_yığını-genel_yazı_tipleri) .css
+
+```css
+/*
+    Google Fonts
+    https://fonts.google.com sitesi üzerinden istediğimiz yazı stilinin html link'ini ve css kodunu alabilir.
+    Roboto ve Damion yazı stili için aldık.
+*/
+
+/* 
+    Yazı tipleri seçip import kısmına gelerek kullanmak istediğimiz yazı tipini import edebiliriz. 
+    Html'de kullandığımız link'e gerek kalmıyor
+    */
+
+@import url("https://fonts.googleapis.com/css2?family=Damion&family=Roboto:ital,wght@0,400;1,700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  font-family: "Damion", cursive;
+  text-align: right; /* metni hizalamak -> sağ */
+}
+.one {
+  font-weight: 500; /* yazı kalınlığı */
+  font-style: italic; /* metin stili italik-kalın-normal vs. */
+  text-indent: 150px; /* paragraf başlığı girintisi */
+  text-align: left;
+}
+.two {
+  font-weight: bolder;
+  text-align: center;
+}
+```
+
+> ## 26- textProperties(metinOzellikleri)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>textProperties(metinOzellikleri)</title>
+    <link
+      rel="stylesheet"
+      href="./css/26- textProperties(metinOzellikleri).css"
+    />
+  </head>
+  <body>
+    <a href="">GOOGLE</a>
+    <h1>hey i'm the main heading</h1>
+    <p class="one">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, eum ullam?
+      Fugiat unde consequuntur nam fugit error odit sint molestiae blanditiis
+      dolorum, sed praesentium a. Suscipit saepe excepturi, eligendi tempora,
+      explicabo asperiores temporibus pariatur, quasi dolor neque qui quibusdam.
+      Aspernatur illum architecto adipisci labore. Et laudantium inventore
+      soluta alias itaque.
+    </p>
+    <p class="two">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, eum ullam?
+      Fugiat unde consequuntur nam fugit error odit sint molestiae blanditiis
+      dolorum, sed praesentium a. Suscipit saepe excepturi, eligendi tempora,
+      explicabo asperiores temporibus pariatur, quasi dolor neque qui quibusdam.
+      Aspernatur illum architecto adipisci labore. Et laudantium inventore
+      soluta alias itaque.
+    </p>
+    <p class="three">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, eum ullam?
+      Fugiat unde consequuntur nam fugit error odit sint molestiae blanditiis
+      dolorum, sed praesentium a. Suscipit saepe excepturi, eligendi tempora,
+      explicabo asperiores temporibus pariatur, quasi dolor neque qui quibusdam.
+      Aspernatur illum architecto adipisci labore. Et laudantium inventore
+      soluta alias itaque.
+    </p>
+  </body>
+</html>
+```
+
+> ## 26- textProperties(metinOzellikleri) .css
+
+```css
+/*
+    text-transform -> text dönüşümü
+        uppercase -> her harf büyük
+        capitalize -> her kelime büyük harfle başlar
+        lowercase -> her harf küçük
+*/
+h1 {
+  text-transform: lowercase; /*text dönüşümü */
+}
+/*
+    text-decoration -> metin dekorasyonu
+        none -> bir şey yok (sade hal)
+        line-through -> üstü çizgili
+        overline -> üstü çizgili
+        underline -> altı çizgili
+*/
+a {
+  font-size: 40px; /* yazı boyutu */
+  text-decoration: none; /* metin dekorasyonu */
+}
+.one {
+  line-height: 2.5em; /* her satır arasındaki boşluklar. */
+  text-decoration: line-through;
+}
+.two {
+  letter-spacing: 5px; /* harfler arasındaki boşluk */
+  text-decoration: overline;
+  line-height: 2rem;
+}
+.three {
+  word-spacing: 20px; /* kelimeler arasındaki boşluk */
+  text-decoration: underline;
+}
+```
+
+> ## 27- boxModel(kutuModel)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxModel(kutuModel)</title>
+    <link rel="stylesheet" href="./css/27- boxModel(kutuModel).css" />
+  </head>
+  <body>
+    <h1>Hello ı would like to learn about css box model!</h1>
+    <p class="pbox">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore velit
+      veritatis quidem, atque quisquam tenetur optio quos at placeat quasi.
+    </p>
+    <p class="pbox1">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore velit
+      veritatis quidem, atque quisquam tenetur optio quos at placeat quasi.
+    </p>
+    <p class="pbox2">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore velit
+      veritatis quidem, atque quisquam tenetur optio quos at placeat quasi.
+    </p>
+    <p class="pbox3">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore velit
+      veritatis quidem, atque quisquam tenetur optio quos at placeat quasi.
+    </p>
+    <p class="pbox4">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore velit
+      veritatis quidem, atque quisquam tenetur optio quos at placeat quasi.
+    </p>
+    <p class="pbox5">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore velit
+      veritatis quidem, atque quisquam tenetur optio quos at placeat quasi.
+    </p>
+  </body>
+</html>
+```
+
+> ## 27- boxModel(kutuModel) .css
+
+```css
+/* 
+    CSS BOX MODEL
+        padding -> dolgu (iç)
+        margin -> kenar boşluğu (dış)   =****= "-" negatif değer alırsa tam tersi kenar boşluğu sağlanır. =****=
+            X: ? -> her taraftan aynı oranda
+            X-top: ? -> üst
+            X-bottom: ? -> alt
+            X-left: ? -> sol
+            X-right: ? -> sağ
+            X: ?1 ?2 -> ?1(üst-alt) ?2(sağ-sol)
+            X: ?1 ?2 ?3 ?4 -> ?1(üst) ?2(sağ) ?3(alt) ?4(sol)
+        border -> sınır çizgisi
+            border-color -> sınır çizgi rengi
+            border-width -> sınır çizgi kalınlığı
+            border-style -> sınır çizgi stili
+            border: ?1 ?2 ?3 -> tek satırda ?1(piksel) ?2 çizgi stili ?3 çizgi rengi
+            border-bottom-style -> alt sınır çizgi stili (üst sağ sol aynı şekilde) 
+                Sınır çizgi stilleri;
+                solid -> kutu halinde (düz çizgi)
+                dashed -> kesikli çizgi
+                dotted -> nokta nokta
+            border-radius -> yarıçap - sınır çizgisine ovallik veriyoruz (en fazla 50px verebiliriz.)
+
+
+*/
+
+h1 {
+  background: red;
+  /* ------- padding ------- */
+  padding-top: 30px; /* yukarıdan dolgu boşluk verir. */
+  padding-bottom: 30px; /* aşağıdan dolgu boşluk verir. */
+  padding-left: 10px; /*soldan dolgu boşluk verir. */
+  padding-right: 70px; /*sağdan dolgu boşluk verir */
+  /* ------- margin ------- */
+  margin-right: 20px; /* sağdan kenar boşluğu */
+  margin-bottom: 50px; /* alt kenar boşluğu */
+  margin-top: 40px; /* üst kenar boşluğu */
+  margin-left: 30px; /* sol kenar boşluğu */
+  /* ------- border ------- */
+  border-style: solid; /* sınır çizgileri */
+  border-width: 10px; /* sınır çizgilerin kalınlığı */
+  border-color: blueviolet; /* sınır çizgilerin rengi */
+}
+.pbox {
+  background: violet;
+  /* ------- padding ------- */
+  padding: 50px; /* sağ sol yukarı ve aşağıdan dolgu boşluk verir. */
+  /* ------- margin ------- */
+  margin: 10px; /* bütün kenar boşluklarını aynı oranda ektiler */
+  /* ------- border ------- */
+  border: 15px solid chocolate; /*tek bir satırda sınır çizgilerini belirttik. */
+}
+
+/* 
+    pbox1 ile pbox2 box kutularının kenar boşluğu alnıp ikisi bir görünmesi için;
+        pbox1'in alt kenar boşluğu - pbox2'in üst kenar boşluğu sıfırlanmalıdır 
+*/
+.pbox1 {
+  background: turquoise;
+  /* ------- padding ------- */
+  padding: 30px 60px; /* sağ ve soldan 60px yukarıdan ve aşağıdan 30px dolgu boşluğu*/
+  /* ------- margin ------- */
+  margin-bottom: 0px;
+  /* ------- border ------- */
+  border-bottom-style: dashed; /* alt sınır çizgi stili  dashed -> kesikli çizgi dotted -> nokta nokta */
+  border-width: 5px; /* alt sınır çizgi kalınlığı */
+  border-color: darkgoldenrod; /* alt sınır çizgi rengi */
+}
+.pbox2 {
+  background: skyblue;
+  /* ------- padding ------- */
+  padding: 20px 70px 40px 50px; /* 20px -> üst; 70px -> sağ; 40px -> aşağı;  50px -> sol  dolgu boşluğu*/
+  /* ------- margin ------- */
+  margin-top: 0px;
+}
+
+.pbox3 {
+  background: slategrey;
+  /* ------- margin ------- */
+  margin: 30px 60px; /* yukarı ve aşağıdan 30px - alt ve üstten 60 px kenar boşluğu */
+  /* ------- border ------- */
+  border: 5px solid orangered; /* tek satırda sınır çizgisi */
+  border-radius: 15px; /* sınır çizgisine ovallik veriyoruz */
+}
+.pbox4 {
+  background: rgb(215, 233, 149);
+  /* ------- margin ------- */
+  margin: 20px 60px 40px 30px; /* 20px -> üst  60px -> sağ 40px -> alt 30px ->sol kenar boşluğu*/
+  /* ------- border ------- */
+  border: 5px solid gold; /* tek satırda sınır çizgisi */
+  border-radius: 50px; /* sınır çizgisine ovallik veriyoruz */
+}
+.pbox5 {
+  background: rosybrown;
+  border: 12px solid blue;
+  border-radius: 15px;
+  margin-top: -60px; /* negatif yönde kenar boşluğu */
+}
+```
+
+> ## 28- outlineProperty(anahatOzelligi)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>outlineProperty(anahatOzelligi)</title>
+    <link
+      rel="stylesheet"
+      href="./css/28- outlineProperty(anahatOzelligi).css"
+    />
+  </head>
+  <body>
+    <div class="buttons">
+      <a href="#" id="one">no outline</a>
+      <a href="#" id="two">outline</a>
+    </div>
+  </body>
+</html>
+```
+
+> ## 28- outlineProperty(anahatOzelligi) .css
+
+```css
+.buttons {
+  margin: 3rem; /*kenar uzunluğu dış*/
+}
+a {
+  background: #689f3f; /* arkaplan rengi */
+  text-decoration: none;
+  padding: 1.2rem 1.5rem; /* dolgu iç kısım */
+  color: #222;
+  text-transform: uppercase; /* metin dönüşümü büyük harf */
+  cursor: pointer; /* imleç */
+  margin: 0 20px;
+}
+#one {
+  border: 0.2rem solid #222; /* sınır çizgisi */
+}
+#two {
+  /* outline öğeyi ön plana çıkarmak için kullanılıyor. sınırların dışında öğenin etrafına çizilen bir çizgidir. */
+  outline-color: 0.2rem;
+  outline-style: solid;
+  outline-color: #222;
+  outline: 0.2rem solid #222; /* outline tek satır halinde yazılışı */
+  outline-offset: 10px; /* öğenin 10px (üst - alt - sağ - sol) aynı oranda dışarıda solid(kutunun) oluşturulması */
+  outline-offset: -15px; /* içeride */
+}
+```
+
+> ## 29- blockInline
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blockInline</title>
+    <link rel="stylesheet" href="./css/29- blockInline.css" />
+  </head>
+  <body>
+    <!--
+        blok elementler yeni satırda başlarlar. 
+        çizgideki elementler aynı satırda devam ederler.
+    -->
+    <div class="block">i'm block element</div>
+    <h1 class="block">i'm block element</h1>
+    <p class="block">i'm block element</p>
+    <span class="inline">i'm inline element</span>
+    <a href="#" class="inline">i'm inline element</a>
+    <img
+      src="./Images/display1.jpg"
+      alt="display-photo"
+      width="50vw"
+      class="inline"
+    />
+  </body>
+</html>
+```
+
+> ## 29- blockInline .css
+
+```css
+/*
+    Blok -> her zaman yeni bir satır başlatır ve tam genişlik alır.
+    inline(çizgideki) -> yeni satıra başlamaz ve yalnızca çok fazla kül içeriği alanı kaplar.
+*/
+
+.block {
+  background: violet;
+  color: bisque;
+  /* blok elementi inline element yapmak için; */
+  display: inline;
+}
+.inline {
+  background: tomato;
+  color: darkred;
+  /* inline elementi blok elementi yapmak için; */
+  display: block;
+}
+```
+
+> ## 30- horizontalCentering(yatayMerkezleme)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>horizontalCentering(yatayMerkezleme)</title>
+    <link
+      rel="stylesheet"
+      href="./css/30- horizontalCentering(yatayMerkezleme).css"
+    />
+  </head>
+  <body>
+    <div class="block">i'm block element</div>
+    <h1 class="block">i'm block element</h1>
+    <p class="block">i'm block element</p>
+
+    <div class="block1">i'm block element</div>
+    <h1 class="block1">i'm block element</h1>
+    <p class="block1">i'm block element</p>
+
+    <span class="inline">i'm inline element</span>
+    <a href="#" class="inline">i'm inline element</a>
+    <img src="./Images/display1.jpg" alt="" class="inline" width="50" />
+  </body>
+</html>
+```
+
+> ## 30- horizontalCentering(yatayMerkezleme) .css
+
+```css
+/* Horizontal Centering -> Yatay Merkezleme */
+* {
+  text-align: center; /* merkeze alma */
+}
+.block {
+  background: yellowgreen;
+  color: black;
+  /* bu durumda genişlik verildiği için merkeze margin ile alabiliriz.*/
+  width: 150px;
+  /* margin ile merkeze alma 1.yol */
+  margin: 20px auto; /* üst ve alt -> 20px sağ ve sol -> otomatik */
+}
+.block1 {
+  background: rgb(91, 50, 205);
+  color: black;
+  /* bu durumda genişlik verildiği için merkeze margin ile alabiliriz.*/
+  width: 150px;
+  /* margin ile merkeze alma 2.yol */
+  margin-left: auto;
+  margin-right: auto;
+}
+.inline {
+  background: turquoise;
+  color: darkgreen;
+}
+```
+
+> ## 31- mobileNavbar(mobilGezinmeCubugu)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mobileNavbar(mobilGezinmeCubugu)</title>
+    <link
+      rel="stylesheet"
+      href="./css/31- mobileNavbar(mobilGezinmeCubugu).css"
+    />
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">about us</a></li>
+      <li><a href="#">products</a></li>
+      <li><a href="#">contact us</a></li>
+    </ul>
+  </body>
+</html>
+```
+
+> ## 31- mobileNavbar(mobilGezinmeCubugu) .css
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul li {
+  list-style-type: none; /* listenin başında imleçler - listelerin nasıl sıralanacağını gösterir.*/
+}
+ul li a {
+  text-decoration: none; /* metin dekorasyonunu sıfırlıyor. - link oluduğu için altındaki çizgi siliniyor*/
+  text-transform: capitalize; /* her kelime büyük harfle başladı. */
+  letter-spacing: 2px; /* harfler arasında boşluk bıraktık. */
+  background: #222;
+  color: red;
+  display: block;
+  padding: 10px 10px;
+  margin: 10px 0px;
+}
+```
+
+> ## 32-
+
+```html
+
+```
+
+> ## 32- .css
 
 ```css
 
