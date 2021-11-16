@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  min-height: 100vh;
+  color:green;
+  font-size: 60px;
+  display: flex; /* kayan nokta veya konumlandırma kullanmadan esnek duyarlı düzen yapısı tasarlamayı kolaylaştırır. */ 
+  justify-content:center ; /* Ürün ana ekseni (yatay) kullanılabilir alanın tamamını kullanmadığınızda mülkiyet esnek kabın öğeleri hizalar. */
+  align-items:center; /* Mülkiyet esnek kap içindeki öğeler için varsayılan hizalamasını belirtir. */
+}
+.big-image {
+  background: url("/Course/Images/back-big.jpeg");
+  background-repeat: round; /* arkaplan görüntüsü pikselde bozulmalar meydana gelmeyerek tekrarlanır. */
+  background-size: cover; /* arkaplan görüntüsü bulunduğu alanı doldurur. pikselde bozulmalar meydana gelebilir. */
+}
+.small-image {
+  border: 3px solid green;
+  background: url("/Course/Images/back-small.jpeg");
+  /* Arkaplan görüntüsünün tekrarlanma durumu */
+  background-repeat: repeat; /* arkaplan görüntüsünü hem dikey hem yatay olarak tekrarlanır */
+  background-repeat: repeat-x; /* arkaplan görüntüsünü yatay olarak tekrarlanır */
+  background-repeat: repeat-y; /* arkaplan görüntüsünü dikey olarak tekrarlanır */
+  background-repeat: space; /* arkaplan görüntüsünü görüntüler arasında boşluk olacak şekilde tekrarlanır */
+  background-repeat: round; /* arkaplan görüntüsü boşluğu doldurmak görüntü tekrarlanır. orantısı bozulur. */
+  background-repeat: no-repeat; /* arkaplan görüntüsünü tekrarlamaz. */
+  /* Arkaplan görüntüsünün konumu */
+  background-position: center; /* arkaplan görüntüsünü merkeze sabitler */
+  background-position: bottom; /* arkaplan görüntüsünü sağ ve solda eşit olarak altta görünmesini sağlar */
+  background-position: top; /* arkaplan görüntüsünü sağ ve solda eşit olarak üstte görünmesini sağlar */
+  background-position: left; /* arkaplan görüntüsünü alt ve üstte eşit olarak solda görünmesini sağlar */
+  background-position: right; /* arkaplan görüntüsünü alt ve üstte eşit olarak sağda görünmesini sağlar */
+  background-position: 0 0; /* background-position: ?1 ?2 -> ?1(X-ekseni) ?2(Y-ekseni) */
+  background-position: 20% 70%; /* background-position: 20% 70% -> 20%(X-ekseni) 70%(Y-ekseni) */
+}
+.folder-image {
+  background: url("/Course/Images/back-folder.jpeg");
+  background-size: contain; /* arkaplan görüntüsünün görünür olmasını sağlar görüntüyü tamamen boyutlandırır. */
+  background-repeat: no-repeat;
+}

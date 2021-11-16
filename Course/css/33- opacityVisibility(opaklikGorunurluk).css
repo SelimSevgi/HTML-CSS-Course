@@ -1,0 +1,20 @@
+div{
+    background: blue;
+    color: white;
+    margin: 10px;
+}
+.none{
+display: none; /* ekranda gösterilmiyor - öğeden tamamen kurtulmak isteniyorsa */
+}
+.opacity-1{
+    opacity: 1; /* saydamlığı 1 tam olarak görünüyor. - görünümü sadece şeffaf oluyor. */ 
+}
+.opacity-5{
+    opacity: 0.5;
+}
+.opacity-0{
+    opacity: 0; /* saydamlığı sıfır olduğu için ekranda görünmüyor. */
+}
+.visibility{
+    visibility: hidden; /* görünümü hidden olduğu için ekranda görünmüyor. */
+}

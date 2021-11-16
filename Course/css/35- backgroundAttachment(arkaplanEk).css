@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    min-height: 100vh;
+    color: rgb(255, 0, 0);
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.big-img{
+    background: url(/Course/Images/back-big.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed ; /* Arka plan resminin sayfa geri kalanı ile kayar */
+
+}
+.folder-img{
+    background: url(/Course/Images/back-folder.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed ; /* Arka plan resminin sayfa geri kalanı ile kayar */
+}

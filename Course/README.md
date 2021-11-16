@@ -2207,13 +2207,314 @@ ul li a {
 }
 ```
 
-> ## 32-
+> ## 32- boxSizing-borderBox(kutuBoyutlandırma-kenarlıkKutusu)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxSizing-borderBox(kutuBoyutlandırma-kenarlıkKutusu)</title>
+    <link
+      rel="stylesheet"
+      href="./css/32- boxSizing-borderBox(kutuBoyutlandırma-kenarlıkKutusu).css"
+    />
+  </head>
+  <body>
+    <div class="box1"><h1>i'm with border-box</h1></div>
+    <div class="box2"><h1>i'm normal</h1></div>
+    <div class="box3"><h1>i'm without border-box</h1></div>
+  </body>
+</html>
+```
+
+> ## 32- boxSizing-borderBox(kutuBoyutlandırma-kenarlıkKutusu) .css
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* kullanılan bütün kutuların aynı boyutta olmasını sağlar */
+}
+.box1,
+.box2,
+.box3 {
+  width: 200px;
+  height: 200px;
+  color: white;
+}
+.box1 {
+  background: red;
+  padding: 20px;
+}
+.box2 {
+  background: blue;
+}
+.box3 {
+  background: green;
+  padding: 20px;
+}
+```
+
+> ## 33- opacityVisibility(opaklikGorunurluk)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>opacityVisibility(opaklikGorunurluk)</title>
+    <link
+      rel="stylesheet"
+      href="./css/33- opacityVisibility(opaklikGorunurluk).css"
+    />
+  </head>
+  <body>
+    <div class="none">none</div>
+    <div class="opacity-1">opacity-1</div>
+    <div class="opacity-5">opacity-5</div>
+    <div class="opacity-0">opacity-0</div>
+    <div class="visibility">visibility</div>
+  </body>
+</html>
+```
+
+> ## 33- opacityVisibility(opaklikGorunurluk) .css
+
+```css
+div {
+  background: blue;
+  color: white;
+  margin: 10px;
+}
+.none {
+  display: none; /* ekranda gösterilmiyor - öğeden tamamen kurtulmak isteniyorsa */
+}
+.opacity-1 {
+  opacity: 1; /* saydamlığı 1 tam olarak görünüyor. - görünümü sadece şeffaf oluyor. */
+}
+.opacity-5 {
+  opacity: 0.5;
+}
+.opacity-0 {
+  opacity: 0; /* saydamlığı sıfır olduğu için ekranda görünmüyor. */
+}
+.visibility {
+  visibility: hidden; /* görünümü hidden olduğu için ekranda görünmüyor. */
+}
+```
+
+> ## 34- backgroundImages(arkaplanGoruntusu)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>backgroundImages(arkaplanResimleri)</title>
+    <link
+      rel="stylesheet"
+      href="./css/34- backgroundImages(arkaplanGoruntusu).css"
+    />
+  </head>
+  <body>
+    <div class="big-image">
+      <h1>BIG IMAGE</h1>
+    </div>
+    <div class="small-image">
+      <h1>SMALL IMAGE</h1>
+    </div>
+    <div class="folder-image">
+      <h1>FOLDER IMAGE</h1>
+    </div>
+  </body>
+</html>
+```
+
+> ## 34- backgroundImages(arkaplanGoruntusu) .css
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  min-height: 100vh;
+  color: green;
+  font-size: 60px;
+  display: flex; /* kayan nokta veya konumlandırma kullanmadan esnek duyarlı düzen yapısı tasarlamayı kolaylaştırır. */
+  justify-content: center; /* Ürün ana ekseni (yatay) kullanılabilir alanın tamamını kullanmadığınızda mülkiyet esnek kabın öğeleri hizalar. */
+  align-items: center; /* Mülkiyet esnek kap içindeki öğeler için varsayılan hizalamasını belirtir. */
+}
+.big-image {
+  background: url("/Course/Images/back-big.jpeg");
+  background-repeat: round; /* arkaplan görüntüsü pikselde bozulmalar meydana gelmeyerek tekrarlanır. */
+  background-size: cover; /* arkaplan görüntüsü bulunduğu alanı doldurur. pikselde bozulmalar meydana gelebilir. */
+}
+.small-image {
+  border: 3px solid green;
+  background: url("/Course/Images/back-small.jpeg");
+  /* Arkaplan görüntüsünün tekrarlanma durumu */
+  background-repeat: repeat; /* arkaplan görüntüsünü hem dikey hem yatay olarak tekrarlanır */
+  background-repeat: repeat-x; /* arkaplan görüntüsünü yatay olarak tekrarlanır */
+  background-repeat: repeat-y; /* arkaplan görüntüsünü dikey olarak tekrarlanır */
+  background-repeat: space; /* arkaplan görüntüsünü görüntüler arasında boşluk olacak şekilde tekrarlanır */
+  background-repeat: round; /* arkaplan görüntüsü boşluğu doldurmak görüntü tekrarlanır. orantısı bozulur. */
+  background-repeat: no-repeat; /* arkaplan görüntüsünü tekrarlamaz. */
+  /* Arkaplan görüntüsünün konumu */
+  background-position: center; /* arkaplan görüntüsünü merkeze sabitler */
+  background-position: bottom; /* arkaplan görüntüsünü sağ ve solda eşit olarak altta görünmesini sağlar */
+  background-position: top; /* arkaplan görüntüsünü sağ ve solda eşit olarak üstte görünmesini sağlar */
+  background-position: left; /* arkaplan görüntüsünü alt ve üstte eşit olarak solda görünmesini sağlar */
+  background-position: right; /* arkaplan görüntüsünü alt ve üstte eşit olarak sağda görünmesini sağlar */
+  background-position: 0 0; /* background-position: ?1 ?2 -> ?1(X-ekseni) ?2(Y-ekseni) */
+  background-position: 20% 70%; /* background-position: 20% 70% -> 20%(X-ekseni) 70%(Y-ekseni) */
+}
+.folder-image {
+  background: url("/Course/Images/back-folder.jpeg");
+  background-size: contain; /* arkaplan görüntüsünün görünür olmasını sağlar görüntüyü tamamen boyutlandırır. */
+  background-repeat: no-repeat;
+}
+```
+
+> ## 35- backgroundAttachment(arkaplanEk)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>backgroundAttachment(arkaplanEk)</title>
+    <link
+      rel="stylesheet"
+      href="./css/35- backgroundAttachment(arkaplanEk).css"
+    />
+  </head>
+  <body>
+    <div class="big-img">BİG İMG</div>
+    <div class="folder-img">FOLDER İMG</div>
+    <div class="big-img">BİG İMG</div>
+  </body>
+</html>
+```
+
+> ## 35- backgroundAttachment(arkaplanEk) .css
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  min-height: 100vh;
+  color: rgb(255, 0, 0);
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.big-img {
+  background: url(/Course/Images/back-big.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Arka plan resminin sayfa geri kalanı ile kayar */
+}
+.folder-img {
+  background: url(/Course/Images/back-folder.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Arka plan resminin sayfa geri kalanı ile kayar */
+}
+```
+
+> ## 36- linearGradients
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linearGradients</title>
+    <link rel="stylesheet" href="./css/36- linearGradients.css" />
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+    <div class="six"></div>
+  </body>
+</html>
+```
+
+> ## 36- linearGradients .css
+
+```css
+div {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+}
+.one {
+  background: linear-gradient(red, yellow); /* üstten altta */
+}
+.two {
+  background: linear-gradient(
+    to top,
+    red,
+    yellow,
+    blue,
+    green
+  ); /* alttan üste */
+}
+.three {
+  background: linear-gradient(
+    315deg,
+    red,
+    yellow
+  ); /* 315 dereceyle üstten aşağıya */
+}
+.four {
+  background: linear-gradient(to top right, red, yellow); /* sağ alttan üstte */
+}
+.five {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.8)
+  ); /* aynı işlem rgba içinde yapılabilir. */
+}
+.six {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.8)
+  ); /* sağdan sola */
+}
+```
+
+> ## 37-
 
 ```html
 
 ```
 
-> ## 32- .css
+> ## 37- .css
 
 ```css
 

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* kullanılan bütün kutuların aynı boyutta olmasını sağlar */
+}
+.box1,
+.box2,
+.box3{
+width: 200px;
+height: 200px;
+color: white;
+}
+.box1{
+    background: red;
+    padding: 20px;
+  
+}
+.box2{
+    background: blue;
+ 
+}
+.box3{
+    background: green;
+    padding: 20px;
+ 
+}

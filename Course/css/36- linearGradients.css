@@ -1,0 +1,23 @@
+div{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+.one{
+    background: linear-gradient(red, yellow); /* üstten altta */
+}
+.two{
+    background: linear-gradient(to top, red, yellow,blue,green); /* alttan üste */
+}
+.three{
+    background: linear-gradient(315deg, red, yellow); /* 315 dereceyle üstten aşağıya */
+}
+.four{
+    background: linear-gradient(to top right, red, yellow); /* sağ alttan üstte */
+}
+.five{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.8)); /* aynı işlem rgba içinde yapılabilir. */
+}
+.six{
+    background: linear-gradient(to left,rgba(0,0,0,0.2),rgba(0,0,0,0.8)); /* sağdan sola */
+}
