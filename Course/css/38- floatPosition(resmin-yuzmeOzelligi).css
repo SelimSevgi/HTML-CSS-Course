@@ -1,0 +1,16 @@
+.bar {
+  border: 5px solid red;
+  padding: 10px;
+ 
+}
+
+.one {
+    float: left;
+    height: 250px;
+}
+.two{
+    float: right;
+}
+p{
+    clear:right;
+}

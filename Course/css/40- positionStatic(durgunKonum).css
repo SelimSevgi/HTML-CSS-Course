@@ -1,0 +1,35 @@
+button{
+    background: red;
+    font-size: 40px;
+    color: white;
+    position: fixed; /* ekranda sürekli aktif olacak */
+    top: 0;
+    right: 0;
+}
+div{
+    border: 3px solid red;
+    background: yellow;
+    margin-top: 40px;
+    position: static;
+}
+.one{
+    background: rgb(140, 140, 202);
+    text-align: left;
+    position: relative; /*  konumlandırma */
+    top: 40px;
+    left: 20rem;
+}
+.two{
+    background: green;
+    position: relative;
+}
+.special{
+    background: red;
+    font-size: 20px;
+    /* two sınıfını mutlak yaptığımız zaman */
+    /* special two sınıfının olduğu için  o sınıfın içinde içinde göreceli olarak konumlandırılacak. */
+    position: absolute; /* göreceli konumlandırma */
+    top: 50%;
+    right: 50%;
+
+}

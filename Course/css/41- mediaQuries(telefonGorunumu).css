@@ -1,0 +1,45 @@
+/* 
+Media Queries --- Medya Sorguları
+Responsive Desing --- Duyarlı Tasarım
+Style Elements on Different Screen Sizes --- Farklı Ekran Boyutlarında Stil Öğeleri
+min-width: -> Starting from --- 'den başlayarak
+max-width: -> up to --- kadar
+Mobile First --- önce mobil
+*/
+body 
+{
+  background: yellow;
+}
+h1 {
+  background: blue;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 500px) /* min 576 ve altındaki genişlikler için uygundur --- max width verildiğinde 800 px de max olduğunda 500px lik görünmeyecek */
+{
+  body {
+    background: red;
+  }
+  .banner {
+    background: yellow;
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 800px) /* min 800px ve altındaki genişlikler için uygundur --- max verildiği zaman 500 px görülmeyecek*/
+{
+  body {
+    background: rgb(10, 5, 255);
+  }
+  .banner {
+    background: rgb(9, 255, 0);
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}

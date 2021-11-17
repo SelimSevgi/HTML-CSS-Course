@@ -1,0 +1,52 @@
+/* 
+    https://www.colorzilla.com/gradient-editor/ sitesinde gradient seçilebiliyor.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 60px;
+  color: orange;
+}
+.banner {
+  background: url("/Course/Images/back-big.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* tek satır halinde yazılabiliyor. */
+.header {
+  background: linear-gradient(rgba(134, 103, 103, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/Course/Images/back-big.jpeg) center/cover no-repeat fixed;
+}
+.colorzilla {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2bef38+0,3a5eff+47,ff3a3a+100 */
+  background: rgb(43, 239, 56); /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(43, 239, 56, 1) 0%,
+    rgba(58, 94, 255, 1) 47%,
+    rgba(255, 58, 58, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(43, 239, 56, 1) 0%,
+    rgba(58, 94, 255, 1) 47%,
+    rgba(255, 58, 58, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    rgba(43, 239, 56, 1) 0%,
+    rgba(58, 94, 255, 1) 47%,
+    rgba(255, 58, 58, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2bef38', endColorstr='#ff3a3a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

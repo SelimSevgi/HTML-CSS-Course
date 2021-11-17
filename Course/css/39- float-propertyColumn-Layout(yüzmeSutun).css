@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    float: left;
+    height: 200px;
+    width: 33.33%;
+}
+.one{
+    background: rebeccapurple;
+}
+.two{
+    background: rgb(51, 153, 102);
+}
+.three{
+    background: red;
+}
+h1{
+    clear: both;
+}

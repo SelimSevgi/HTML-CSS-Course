@@ -2508,13 +2508,480 @@ div {
 }
 ```
 
-> ## 37-
+> ## 37- backgroundImage-shortcutsCombined(arkaplanResmi-kısayollarıKombine)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      backgroundImage-shortcutsCombined(arkaplanResmi-kısayollarıKombine)
+    </title>
+    <link
+      rel="stylesheet"
+      href="./css/37- backgroundImage-shortcutsCombined(arkaplanResmi-kısayollarıKombine).css"
+    />
+  </head>
+  <body>
+    <div class="banner"><h1>Hello World</h1></div>
+    <div class="header"><h1>Hello People</h1></div>
+    <div class="colorzilla"></div>
+  </body>
+</html>
+```
+
+> ## 37- backgroundImage-shortcutsCombined(arkaplanResmi-kısayollarıKombine) .css
+
+```css
+/* 
+    https://www.colorzilla.com/gradient-editor/ sitesinde gradient seçilebiliyor.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 60px;
+  color: orange;
+}
+.banner {
+  background: url("/Course/Images/back-big.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* tek satır halinde yazılabiliyor. */
+.header {
+  background: linear-gradient(rgba(134, 103, 103, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/Course/Images/back-big.jpeg) center/cover no-repeat fixed;
+}
+.colorzilla {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2bef38+0,3a5eff+47,ff3a3a+100 */
+  background: rgb(43, 239, 56); /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(43, 239, 56, 1) 0%,
+    rgba(58, 94, 255, 1) 47%,
+    rgba(255, 58, 58, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(43, 239, 56, 1) 0%,
+    rgba(58, 94, 255, 1) 47%,
+    rgba(255, 58, 58, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    rgba(43, 239, 56, 1) 0%,
+    rgba(58, 94, 255, 1) 47%,
+    rgba(255, 58, 58, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2bef38', endColorstr='#ff3a3a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+```
+
+> ## 38- floatPosition(resmin-yuzmeOzelligi)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>floatPosition(resmin-yuzmeOzelligi)</title>
+    <link
+      rel="stylesheet"
+      href="./css/38- floatPosition(resmin-yuzmeOzelligi).css"
+    />
+  </head>
+  <body>
+    <div class="bar">
+      <img src="./Images/back-small.jpeg" class="one" alt="nice view" />
+      <img src="./Images/back-small.jpeg" class="two" alt="nice view" />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos,
+        quibusdam impedit nisi tempore eaque porro unde excepturi praesentium
+        saepe soluta, ratione facilis aspernatur, obcaecati quidem commodi ipsa
+        dolore nemo? Consequatur repellat sequi iure earum iste qui accusantium,
+        eligendi harum minima! Voluptate repellat maiores consectetur ipsum quos
+        eius officia nulla? Fugiat.
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+> ## 38- floatPosition(resmin-yuzmeOzelligi) .css
+
+```css
+.bar {
+  border: 5px solid red;
+  padding: 10px;
+}
+
+.one {
+  float: left;
+  height: 250px;
+}
+.two {
+  float: right;
+}
+p {
+  clear: right;
+}
+```
+
+> ## 39- float-propertyColumn-Layout(yüzmeSutun)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float-propertyColumn-Layout(yüzmeSutun)</title>
+    <link
+      rel="stylesheet"
+      href="./css/39- float-propertyColumn-Layout(yüzmeSutun).css"
+    />
+  </head>
+  <body>
+    <div class="one">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nam!
+    </div>
+    <div class="two">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nam!
+    </div>
+    <div class="three">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nam!
+    </div>
+    <div class="three">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nam!
+    </div>
+    <h1>Hello World</h1>
+  </body>
+</html>
+```
+
+> ## 39- float-propertyColumn-Layout(yüzmeSutun) .css
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  float: left;
+  height: 200px;
+  width: 33.33%;
+}
+.one {
+  background: rebeccapurple;
+}
+.two {
+  background: rgb(51, 153, 102);
+}
+.three {
+  background: red;
+}
+h1 {
+  clear: both;
+}
+```
+
+> ## 40- positionStatic(durgunKonum)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>positionStatic(durgunKonum)</title>
+    <link rel="stylesheet" href="./css/40- positionStatic(durgunKonum).css" />
+  </head>
+  <body>
+    <div>
+      <p class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro
+        repellat debitis tempore officiis animi quo illum. Minima quos
+        voluptatem ipsa incidunt quas at doloremque, ad culpa quam recusandae.
+        Eveniet, illum aperiam odit molestias minus alias consequuntur.
+        Accusantium, quam sequi.
+      </p>
+      <p class="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro
+        repellat debitis tempore officiis animi quo illum. Minima quos
+        voluptatem ipsa incidunt quas at doloremque, ad culpa quam recusandae.
+        Eveniet, illum aperiam odit molestias minus alias consequuntur.
+        Accusantium, quam sequi.<span class="special">Hey i'm absolute</span>
+      </p>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deserunt
+      velit dolorem perspiciatis vero rerum autem ea, temporibus placeat
+      voluptate ullam omnis reprehenderit eos vitae pariatur nobis ipsum?
+      Explicabo deleniti atque incidunt iusto repellendus! Soluta cumque, vero
+      cum aspernatur a quasi obcaecati repellendus, voluptas, commodi assumenda
+      odio molestias? Sequi culpa eius ab, reiciendis optio excepturi. Id,
+      repellendus voluptatem corporis consectetur consequatur, dolores odit
+      iusto nam ipsam quasi, fugit quis ratione modi sapiente ipsum nisi aliquam
+      illum praesentium vitae? Sint necessitatibus deserunt voluptatibus
+      asperiores reprehenderit dolor obcaecati, nobis quasi ex blanditiis,
+      architecto tempora! Deserunt perspiciatis a libero, rerum neque harum
+      ducimus esse aliquid aspernatur! Dolore id voluptatem illum quas veniam
+      hic exercitationem error, dolor ipsum eum animi quos suscipit, magni ut
+      corporis nam rem! Ipsa, dolorem numquam dicta officia sint quae,
+      architecto tempore explicabo quibusdam nihil, fugit aliquid accusamus sed
+      ex neque. Est, dicta iure. Eaque, laudantium nobis itaque tempora, aperiam
+      ex nesciunt tempore quis minus facere enim, modi explicabo! Natus sunt
+      voluptatem impedit temporibus quis libero repellat repudiandae rerum? Modi
+      nesciunt quo, debitis molestiae, animi error aperiam quisquam odio
+      recusandae placeat necessitatibus rerum adipisci aliquid porro cupiditate.
+      Consequatur ipsam iste optio eius cupiditate exercitationem cum, vitae
+      ratione at nemo. Tempora, pariatur nam ipsa qui nihil dolore enim
+      dignissimos deleniti eum fugit necessitatibus saepe repellat, nobis quis!
+      Deserunt ducimus laborum aliquid natus harum asperiores nam repellendus
+      officiis hic assumenda? Architecto corrupti nesciunt accusantium
+      perferendis eligendi. Velit id quis, tempora nesciunt explicabo blanditiis
+      placeat molestiae earum debitis repudiandae corporis excepturi, mollitia
+      cum doloremque laborum temporibus, eligendi expedita hic deleniti fuga.
+      Totam sint quas nobis sed dolorem vel possimus quia ipsa consequatur culpa
+      porro officiis sapiente, blanditiis natus molestiae, amet minima provident
+      odit similique ipsum inventore neque? Nihil, maiores facere. Incidunt,
+      animi non! Magnam, odio dolore. Voluptates autem error quidem eos eaque
+      aliquam expedita earum nam facilis ducimus accusantium quo, perspiciatis
+      quasi voluptatum minus ea repudiandae in atque hic repellat quia maiores
+      assumenda et? Veniam dicta dolorem molestias beatae praesentium aut
+      maxime, est, vitae quidem, error totam. Voluptatibus placeat dolorem natus
+      animi impedit, laudantium tenetur, nobis consequuntur delectus tempore
+      consectetur quidem ipsam voluptatem quas nulla dolore reprehenderit fugiat
+      repellat error a qui! Nesciunt quae saepe voluptas fuga quod laborum
+      delectus itaque quam dolorum rerum atque autem vitae accusantium hic cum
+      temporibus mollitia voluptate, sunt laudantium non similique in animi
+      ullam. Ea quisquam deserunt fugiat reprehenderit ullam praesentium
+      veritatis dolores consequuntur culpa, ipsam totam nisi laborum ipsum
+      libero tempore quam maxime officia rem sit non, accusamus facere commodi
+      est eveniet! Delectus reprehenderit quidem perferendis beatae provident,
+      neque praesentium, quod fugiat odio quam amet eligendi inventore quia
+      numquam cupiditate modi placeat quibusdam at reiciendis quo hic. Nulla
+      veniam nemo voluptatum natus aspernatur enim dolorem, molestiae doloremque
+      deleniti voluptates quia unde dolorum similique, dignissimos iste neque
+      suscipit rem vel recusandae optio. Quaerat voluptatibus laudantium ab non
+      nam placeat, cum, fugit iusto praesentium, corporis dignissimos accusamus
+      alias ut id dolorem. Aliquid, facilis et. Sequi fuga quas ducimus, error
+      officia nisi eveniet labore! Recusandae dolores qui odio saepe!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+      recusandae delectus. Iure facere adipisci molestiae eius recusandae
+      deleniti nostrum, magnam illo vel porro minus omnis dolorem est error
+      delectus cum aut? Consectetur accusantium explicabo veritatis asperiores
+      repellat voluptatibus cupiditate in! Obcaecati est, quos hic quam earum
+      illum, reprehenderit veritatis eaque optio voluptatem asperiores eos
+      consectetur? Nulla quod itaque nesciunt sit sunt ducimus. Qui impedit,
+      dolorem voluptatem quo perspiciatis excepturi placeat quod enim autem,
+      iste tempora atque repellendus deserunt hic quae expedita quisquam? Culpa
+      ad nulla eveniet cupiditate? Quaerat dolorem ipsum assumenda ad sed,
+      laboriosam facilis, excepturi veniam minima expedita quos aliquam natus
+      mollitia? Fugit, modi quam beatae, assumenda esse molestias tenetur,
+      provident eos pariatur ipsam nostrum officiis tempore voluptatibus. A quae
+      molestias veritatis cumque numquam nostrum recusandae unde doloremque
+      architecto quos aliquam tempora dicta accusantium, vitae, maiores autem
+      debitis omnis. Dignissimos consequuntur soluta magni iusto numquam, ullam
+      voluptatibus aliquid velit nihil debitis voluptate? Iure iste aperiam
+      porro nisi, voluptates quasi praesentium aliquid aspernatur temporibus hic
+      nulla nam laboriosam, possimus doloribus quisquam nesciunt in esse eveniet
+      quaerat suscipit tempora earum accusantium vitae. Quia ex eius beatae unde
+      totam magnam provident, fugit nobis, velit facere vitae officia ipsa vero
+      doloribus, mollitia saepe? Et corporis distinctio sit ipsum eum
+      dignissimos porro ex, iusto placeat est consectetur! Asperiores iure at
+      reprehenderit voluptatem, pariatur eveniet eum numquam, earum quos aliquam
+      magni ad. Nihil, omnis rerum dolor blanditiis incidunt quis necessitatibus
+      ducimus? Ea facere necessitatibus quae aliquid veniam, mollitia voluptates
+      omnis, dolorum reiciendis sit incidunt. Tempore, tempora. Maxime, numquam.
+      Necessitatibus perferendis veniam quis numquam distinctio modi aut sit
+      expedita! Animi tempore dolore sapiente rerum quas a. Sequi mollitia
+      aspernatur fugiat? Asperiores repellat fuga eius unde consequuntur
+      corporis soluta nesciunt sequi consequatur molestiae non voluptatibus
+      repellendus delectus labore quia suscipit et voluptates, ea ipsa odio,
+      explicabo animi illo optio? Odit ullam necessitatibus aliquam deserunt
+      voluptate dolore corporis sequi, tempora in eum inventore perferendis
+      quidem asperiores atque molestias sapiente, aut unde aperiam omnis nulla,
+      autem amet. Ratione tempore asperiores quo, quibusdam possimus accusantium
+      corrupti maiores architecto in facilis debitis eligendi? Ducimus repellat
+      ab tempora totam accusamus, consequatur quas eius, perspiciatis dicta
+      dolore aliquam iste voluptatibus dolor autem quod? Exercitationem
+      consectetur laboriosam, illum laborum quod facilis praesentium ab saepe
+      nostrum aperiam cupiditate sed adipisci doloribus tempora assumenda
+      nesciunt perspiciatis, itaque velit! Cum asperiores perspiciatis soluta
+      vero quis dolorem ex quas nostrum sint? Commodi dolore placeat, at sint
+      temporibus sapiente adipisci expedita fugit, magnam ipsum provident. Earum
+      officiis molestias asperiores. Quisquam ipsa, praesentium non optio
+      blanditiis asperiores inventore laborum distinctio architecto, nulla
+      similique quos quam dolores cum aspernatur corporis. Aut minima quae nihil
+      sint sapiente quod, magnam beatae. Inventore nemo perspiciatis quisquam
+      placeat ut animi rerum recusandae alias, accusamus odit incidunt numquam
+      ea veniam, accusantium debitis explicabo. Id alias facilis magni quaerat
+      sint temporibus dolorum illo accusantium voluptate reiciendis eos eveniet,
+      error ullam delectus nobis rerum laudantium? Velit totam voluptatem ipsa
+      suscipit culpa cum qui, debitis labore tenetur vero dolore at impedit
+      numquam fuga. Culpa laudantium soluta earum. Veniam, quidem?
+    </p>
+    <button>Nav Button</button>
+  </body>
+</html>
+```
+
+> ## 40- positionStatic(durgunKonum) .css
+
+```css
+button {
+  background: red;
+  font-size: 40px;
+  color: white;
+  position: fixed; /* ekranda sürekli aktif olacak */
+  top: 0;
+  right: 0;
+}
+div {
+  border: 3px solid red;
+  background: yellow;
+  margin-top: 40px;
+  position: static;
+}
+.one {
+  background: rgb(140, 140, 202);
+  text-align: left;
+  position: relative; /*  konumlandırma */
+  top: 40px;
+  left: 20rem;
+}
+.two {
+  background: green;
+  position: relative;
+}
+.special {
+  background: red;
+  font-size: 20px;
+  /* two sınıfını mutlak yaptığımız zaman */
+  /* special two sınıfının olduğu için  o sınıfın içinde içinde göreceli olarak konumlandırılacak. */
+  position: absolute; /* göreceli konumlandırma */
+  top: 50%;
+  right: 50%;
+}
+```
+
+> ## 41- mediaQuries(telefonGorunumu)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mediaQuries(telefonGorunumu)</title>
+    <link rel="stylesheet" href="./css/41- mediaQuries(telefonGorunumu).css" />
+  </head>
+  <body>
+    <div class="banner">
+      <h1>hello world i'm learning css</h1>
+    </div>
+  </body>
+</html>
+```
+
+> ## 41- mediaQuries(telefonGorunumu) .css
+
+```css
+/* 
+Media Queries --- Medya Sorguları
+Responsive Desing --- Duyarlı Tasarım
+Style Elements on Different Screen Sizes --- Farklı Ekran Boyutlarında Stil Öğeleri
+min-width: -> Starting from --- 'den başlayarak
+max-width: -> up to --- kadar
+Mobile First --- önce mobil
+*/
+body {
+  background: yellow;
+}
+h1 {
+  background: blue;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 500px) /* min 576 ve altındaki genişlikler için uygundur --- max width verildiğinde 800 px de max olduğunda 500px lik görünmeyecek */ {
+  body {
+    background: red;
+  }
+  .banner {
+    background: yellow;
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 800px) /* min 800px ve altındaki genişlikler için uygundur --- max verildiği zaman 500 px görülmeyecek*/ {
+  body {
+    background: rgb(10, 5, 255);
+  }
+  .banner {
+    background: rgb(9, 255, 0);
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}
+```
+
+> ## 42- Z-Index(zİndeksi)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z-Index(zİndeksi)</title>
+    <link rel="stylesheet" href="./css/42- Z-Index(zİndeksi).css" />
+  </head>
+  <body>
+    <div class="banner">
+      <img src="./Images/back-small.jpeg" alt="" class="one" />
+      <img src="./Images/back-big.jpeg" alt="" class="two" />
+      <img src="./Images/back-folder.jpeg" alt="" class="three" />
+    </div>
+  </body>
+</html>
+```
+
+> ## 43-
 
 ```html
 
 ```
 
-> ## 37- .css
+> ## 43- .css
 
 ```css
 
