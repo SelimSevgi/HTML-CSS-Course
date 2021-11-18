@@ -2975,13 +2975,340 @@ h1 {
 </html>
 ```
 
-> ## 43-
+> ## 43- before-after_pseudoElements(once-sonra_sozdeOgeler)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>before-after_pseudoElements(once-sonra_sozdeOgeler)</title>
+    <link
+      rel="stylesheet"
+      href="./css/43- before-after_pseudoElements(once-sonra_sozdeOgeler).css"
+    />
+  </head>
+  <body>
+    <p>before and after pseudo elements</p>
+    <div>
+      <img src="./Images/back-big.jpeg" alt="" />
+    </div>
+  </body>
+</html>
+```
+
+> ## 43- before-after_pseudoElements(once-sonra_sozdeOgeler) .css
+
+```css
+/*
+    Pseudo elements ::before ::after CONTENT not element (::before ve ::after içerik öğe değil)
+    content:'' --- required (içerik --- gerekli)
+    img --- does't work (img'da çalışmıyor
+*/
+p::before {
+  content: "before "; /* html'de yazdığımız paragrafın başına "yazmış olduğumuz" kısım görünüyor. */
+  font-size: 2rem;
+  display: block;
+  background-color: black;
+  font-weight: bold;
+  color: red;
+}
+p::after {
+  content: ""; /* bir şey eklemek istediğimiz zaman content: komutunu kullanıyoruz. */
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: green;
+}
+div {
+  width: 60vw;
+  margin: 100px auto;
+  /* border: 2px solid rebeccapurple; */
+  position: relative;
+}
+img {
+  width: 100%; /* yüzde işareti verdiğimiz zaman resmimiz div e duyarlı hale geliyor */
+
+  display: block; /* resmin altında boşluk meydana geliyor Sıfırlamak için */
+}
+/* görüldüğü gibi img içerisine ::before komutunu yerleştiremedik. */
+img::before {
+  content: "img before ";
+}
+/* div'in içerisinde img oluğu için div'e direk ::before veya ::after komutunu eklebiliriz. */
+div::before {
+  content: "";
+  border: 2px solid grey;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -40px;
+  left: -40px;
+  z-index: -2;
+  transition: all 0.5s linear; /* geçiş efekti sağlar */
+}
+div::after {
+  content: "";
+  background: grey;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+div:hover::before, /* hover komutu fare öğenin üzerine glediğinde seçmek için kullanılır */
+div:hover::after {
+  top: 0;
+  left: 0;
+}
+```
+
+> ## 44- basicSelectors(temelSeciciler)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basicSelectors(temelSeciciler)</title>
+    <link
+      rel="stylesheet"
+      href="./css/44- basicSelectors(temelSeciciler).css"
+    />
+  </head>
+  <body>
+    <h1 id="heading">i'm id heading</h1>
+    <h1 class="heading">i'm class heading</h1>
+    <p>hello world</p>
+  </body>
+</html>
+```
+
+> ## 44- basicSelectors(temelSeciciler)) .css
+
+```css
+/* Basic Selector (Temel Seçiciler) */
+/* Descendant and Child Combinators (Torun ve Çocuk Birleştirici) */
+* {
+  color: red;
+}
+#heading {
+  font-size: 40px;
+  text-transform: uppercase; /* Tüm harfler büyük */
+  color: blue;
+}
+.heading {
+  font-size: 20px;
+  text-transform: capitalize; /* baş harfi büyük */
+  color: green;
+}
+p {
+  letter-spacing: 20px;
+}
+```
+
+> ## 45- descendant_childSelectors(soydan-gelen_cocukSeçiciler)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>descendant_childSelectors(soydan-gelen_cocukSeçiciler)</title>
+    <link
+      rel="stylesheet"
+      href="./css/45- descendant_childSelectors(soydan-gelen_cocukSeçiciler).css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>i'm child and descendant</h1>
+    </div>
+    <div class="header">
+      <ul>
+        <li>
+          <h1>i'm descendant</h1>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+```
+
+> ## 45- descendant_childSelectors(soydan-gelen_cocukSeçiciler) .css
+
+```css
+/* Descendant and Child Combinators (Torun ve Çocuk Birleştirici) */
+
+div h1 {
+  color: red;
+}
+/* ilk yazdığımız div'in içerisindeki birinci başlığın rengi değişti */
+div > h1 {
+  color: blue;
+}
+/* clasın içinde olduğu için daha özel oluyor. her iki başlık rengi değişiyor. */
+.header h1 {
+  color: green;
+}
+/* birleştirici olayından dolayı div'deki olayın aynısı burada da geçerli oluyor. */
+.header > h1 {
+  color: purple;
+}
+```
+
+> ## 46- firstLine-firstLetter(ilkSatır-ilkHarf)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>firstLine-firstLetter(ilkSatır-ilkHarf)</title>
+    <link
+      rel="stylesheet"
+      href="./css/46- firstLine-firstLetter(ilkSatır-ilkHarf).css"
+    />
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ex
+      atque nesciunt quidem deleniti quisquam mollitia non nihil eum molestias
+      ad dolorum, possimus earum quibusdam nulla ipsum pariatur rem eaque.
+    </p>
+  </body>
+</html>
+```
+
+> ## 46- firstLine-firstLetter(ilkSatır-ilkHarf) .css
+
+```css
+/* ::first-line ::first-letter (ilk Satır  ilk Harf) */
+/* İlk satır */
+p::first-line {
+  font-weight: bold;
+}
+/* İlk harf */
+p::first-letter {
+  font-size: 3rem;
+}
+```
+
+> ## 47- hoverPseudo_classSelector(fareyle-uzerineGelme_sınıfSecici)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hoverPseudo_classSelector(fareyle-uzerineGelme_sınıfSecici)</title>
+    <link
+      rel="stylesheet"
+      href="./css/47- hoverPseudo_classSelector(fareyle-uzerineGelme_sınıfSecici).css"
+    />
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui porro
+      molestiae numquam error vero nemo maxime at, facere praesentium dicta
+      nostrum tempore consectetur rerum labore soluta veniam non ducimus
+      architecto neque? Nisi cupiditate dolorem alias velit facere. Tempora
+      harum, quod iure distinctio cumque maxime, cum eveniet, repellat ut
+      officiis doloribus!
+    </p>
+    <div class="header">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus harum
+      nam unde asperiores pariatur ex corrupti! Vero aperiam nihil laudantium
+      sit, esse debitis repudiandae modi quis! Consectetur eum pariatur
+      laudantium!
+    </div>
+    <a href="#">This is a link</a>
+  </body>
+</html>
+```
+
+> ## 47- hoverPseudo_classSelector(fareyle-uzerineGelme_sınıfSecici) .css
+
+```css
+/* :hover (üzerine gelmek) */
+
+/* fareyle üzerine gelindiğinde yazı rengi kırmızı oluyor */
+p:hover {
+  color: red;
+}
+/* fareyle üzerine gelindiğinde arkaplan rengi mavi ve yazı rengi beyaz oluyor */
+.header:hover {
+  background: blue;
+  color: white;
+}
+a:hover {
+  text-decoration: none; /* fareyle üzerine geldiğinde linkin alt çizgisi görünmüyor */
+}
+```
+
+> ## 48- linkPseudo_classSelectors(sozdeBaglanti_sinifSecici)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linkPseudo_classSelectors(sozdeBaglanti_sinifSecici)</title>
+    <link
+      rel="stylesheet"
+      href="./css/48- linkPseudo_classSelectors(sozdeBaglanti_sinifSecici).css"
+    />
+  </head>
+  <body>
+    <a href="https://www.google.com" target="_black">General link</a>
+    <a href="#">Visited link</a>
+    <a href="https://www.google.com" target="_black">Hover link</a>
+    <a href="https://www.google.com" target="_black">Active link</a>
+  </body>
+</html>
+```
+
+> ## 48- linkPseudo_classSelectors(sozdeBaglanti_sinifSecici) .css
+
+```css
+/* :link :visited :hover :active */
+
+a:link {
+  color: aqua;
+}
+/* fareyle üzerine tıklandığı zaman rengi değişiyor */
+a:visited {
+  color: red;
+}
+/* üzerine fare ile gelindiğinde */
+a:hover {
+  color: blue;
+}
+```
+
+> ## 49-
 
 ```html
 
 ```
 
-> ## 43- .css
+> ## 49- .css
 
 ```css
 

@@ -1,0 +1,9 @@
+/* ::first-line ::first-letter (ilk Satır  ilk Harf) */
+/* İlk satır */
+p::first-line{
+    font-weight: bold;
+}
+/* İlk harf */
+p::first-letter{
+    font-size: 3rem; 
+}

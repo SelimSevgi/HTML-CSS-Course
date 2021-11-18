@@ -1,0 +1,17 @@
+/* Descendant and Child Combinators (Torun ve Çocuk Birleştirici) */ 
+
+div h1{
+color: red ;
+}
+/* ilk yazdığımız div'in içerisindeki birinci başlığın rengi değişti */
+div > h1{
+    color: blue; 
+}
+/* clasın içinde olduğu için daha özel oluyor. her iki başlık rengi değişiyor. */
+.header h1{
+    color: green;
+}
+/* birleştirici olayından dolayı div'deki olayın aynısı burada da geçerli oluyor. */
+.header > h1 {
+    color: purple;
+}

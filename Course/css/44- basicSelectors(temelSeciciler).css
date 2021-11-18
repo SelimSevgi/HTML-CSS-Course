@@ -1,0 +1,18 @@
+/* Basic Selector (Temel Seçiciler) */
+/* Descendant and Child Combinators (Torun ve Çocuk Birleştirici) */ 
+*{
+    color:red;
+}
+#heading{
+    font-size: 40px;
+    text-transform: uppercase; /* Tüm harfler büyük */ 
+    color: blue;
+}
+.heading{
+    font-size: 20px;
+    text-transform: capitalize; /* baş harfi büyük */
+    color: green;
+}
+p{
+    letter-spacing: 20px;
+}

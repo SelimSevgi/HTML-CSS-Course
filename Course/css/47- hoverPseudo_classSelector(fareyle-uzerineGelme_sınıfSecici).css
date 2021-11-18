@@ -1,0 +1,14 @@
+/* :hover (üzerine gelmek) */
+
+/* fareyle üzerine gelindiğinde yazı rengi kırmızı oluyor */
+p:hover{
+    color: red;
+}
+/* fareyle üzerine gelindiğinde arkaplan rengi mavi ve yazı rengi beyaz oluyor */
+.header:hover{
+    background: blue;
+    color:white
+}
+a:hover{
+    text-decoration: none; /* fareyle üzerine geldiğinde linkin alt çizgisi görünmüyor */
+}
