@@ -1,0 +1,25 @@
+/* 
+    :root root element od the document(belgenin kök öğesi)
+    html element(html öğesi)
+    general styles(genel stiller)
+    css variables(css değişkenleri)
+*/
+:root{
+    background: red;
+    /* 
+        tarayıcıdaki ayarlarına gerek kalmadan yazı boyutunu değiştirmek için 
+        rem'e bağlı olan yazı yotuları aynı oranda değiştiğini görebiliyoruz.
+    */
+    font-size: 150%;
+}
+/* 1rem = 16px */
+/* tarayıcı ayarlarında yazı boyutu değiştiği zaman rem ile yazı boyutları değişmektedir. */ 
+h1{
+    font-size: 3rem;
+}
+.absolute{
+    font-size: 24px;
+}
+.responsive{
+    font-size: 1.5rem;
+}

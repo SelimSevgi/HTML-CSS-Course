@@ -11,3 +11,7 @@ a:visited{
 a:hover{
     color: blue;
 }
+/* fareyle linkin üzerine tıklandığı zaman boyunca */
+a:active{
+    color: green;
+}

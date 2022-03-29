@@ -3276,12 +3276,13 @@ a:hover {
     />
   </head>
   <body>
-    <a href="https://www.google.com" target="_black">General link</a>
+    <a href="https://www.google.com" target="_blank">General link</a>
     <a href="#">Visited link</a>
-    <a href="https://www.google.com" target="_black">Hover link</a>
-    <a href="https://www.google.com" target="_black">Active link</a>
+    <a href="https://www.google.com" target="_blank">Hover link</a>
+    <a href="https://www.google.com" target="_blank">Active link</a>
   </body>
 </html>
+
 ```
 
 > ## 48- linkPseudo_classSelectors(sozdeBaglanti_sinifSecici) .css
@@ -3289,27 +3290,177 @@ a:hover {
 ```css
 /* :link :visited :hover :active */
 
-a:link {
-  color: aqua;
+a:link{
+    color: aqua;
 }
 /* fareyle üzerine tıklandığı zaman rengi değişiyor */
-a:visited {
-  color: red;
+a:visited{
+    color: red;
 }
 /* üzerine fare ile gelindiğinde */
-a:hover {
-  color: blue;
+a:hover{
+    color: blue;
+}
+/* fareyle linkin üzerine tıklandığı zaman boyunca */
+a:active{
+    color: green;
 }
 ```
 
-> ## 49-
+> ## 49- rootPseudo_classSelectors(sozdeKok_sinifSecici)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rootPseudo_classSelectors(sozdeKok_sinifSecici)</title>
+    <link
+      rel="stylesheet"
+      href="./css/49- rootPseudo_classSelectors(sozdeKok_sinifSecici).css"
+    />
+  </head>
+  <body>
+    <h1>i'm heading</h1>
+    <p class="absolute">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eveniet iste
+      culpa inventore, necessitatibus eligendi voluptate asperiores nulla
+      temporibus deleniti quaerat! Inventore fugit expedita ipsam quam fuga odio
+      tenetur nostrum!
+    </p>
+        <p class="responsive">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eveniet iste
+      culpa inventore, necessitatibus eligendi voluptate asperiores nulla
+      temporibus deleniti quaerat! Inventore fugit expedita ipsam quam fuga odio
+      tenetur nostrum!
+    </p>
+  </body>
+</html>
+```
+
+> ## 49- rootPseudo_classSelectors(sozdeKok_sinifSecici) .css
+
+```css
+/* 
+    :root root element od the document(belgenin kök öğesi)
+    html element(html öğesi)
+    general styles(genel stiller)
+    css variables(css değişkenleri)
+*/
+:root{
+    background: red;
+    /* 
+        tarayıcıdaki ayarlarına gerek kalmadan yazı boyutunu değiştirmek için 
+        rem'e bağlı olan yazı yotuları aynı oranda değiştiğini görebiliyoruz.
+    */
+    font-size: 150%;
+}
+/* 1rem = 16px */
+/* tarayıcı ayarlarında yazı boyutu değiştiği zaman rem ile yazı boyutları değişmektedir. */ 
+h1{
+    font-size: 3rem;
+}
+.absolute{
+    font-size: 24px;
+}
+.responsive{
+    font-size: 1.5rem;
+}
+```
+> ## 50- 
 
 ```html
 
 ```
 
-> ## 49- .css
+> ## 50-  .css
 
 ```css
 
 ```
+> ## 50- 
+
+```html
+
+```
+
+> ## 50-  .css
+
+```css
+
+```
+
+> ## 50- 
+
+```html
+
+```
+
+> ## 50-  .css
+
+```css
+
+```
+
+> ## 50- 
+
+```html
+
+```
+
+> ## 50-  .css
+
+```css
+
+```
+
+> ## 50- 
+
+```html
+
+```
+
+> ## 50-  .css
+
+```css
+
+```
+
+> ## 50- 
+
+```html
+
+```
+
+> ## 50-  .css
+
+```css
+
+```
+
+> ## 50- 
+
+```html
+
+```
+
+> ## 50-  .css
+
+```css
+
+```
+
+> ## 50- 
+
+```html
+
+```
+
+> ## 50-  .css
+
+```css
+
+```
+
